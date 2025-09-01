@@ -1,0 +1,50 @@
+import React from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { diamondsData } from '../data/diamondsData';
+import Diamond_C from './Diamond_C';
+const Diamond = () => {
+  return (
+    <div className='w-full mt-[60px]'>
+      <h1 className='w-full text-center font-garamond font-[500] italic text-[20px] md:text-[40px]  mx-auto'>
+        Shop by Diamond Shape
+      </h1>
+
+      <div className='w-full  mx-auto flex items-center justify-center'>
+        <Carousel className="w-full px-12 ">
+          <CarouselContent>
+          {diamondsData.map((item, index) => (
+  <CarouselItem
+    key={item.id || index} // best to use a unique id if available
+    className="basis-1/3 md:basis-1/8 lg:basis-1/10"
+  >
+    <Diamond_C img={item.img} link={item.link} />
+  </CarouselItem>
+))}
+          </CarouselContent>
+
+          <CarouselPrevious className="absolute !z-20 !opacity-0 left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+          </CarouselPrevious>
+
+          {/* Custom Next Arrow */}
+          <CarouselNext className="absolute !z-20 !opacity-0  right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+          </CarouselNext>
+          <Image src="/images/cr-left.svg" width={15} height={24} alt="img" className="absolute z-10 left-2 top-1/2 -translate-y-1/2"></Image>
+          <Image src="/images/cr-right.svg" width={15} height={24} alt="img" className="absolute z-10 right-2 top-1/2 -translate-y-1/2"></Image>
+        </Carousel>
+      </div>
+    </div>
+
+  );
+}
+
+
+
+export default Diamond;
