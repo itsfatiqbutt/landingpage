@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef } from "react"
-import Important_C from "./Important_C"
+
 import { browseData } from "../data/brosweData"
 import {
   Carousel,
@@ -10,6 +10,7 @@ import {
   /* NOTE: we intentionally DO NOT use CarouselNext/CarouselPrevious here so we can provide
      our own minimal, always-working buttons. */
 } from "@/components/ui/carousel"
+import Browse_C from "./Browse_C"
 
 // Minimal custom arrows that do not rely on the carousel's built-in controls.
 // They find the first scrollable element inside the Carousel and scroll it by one page.
@@ -37,17 +38,24 @@ const Browse = () => {
   const scrollNext = () => {
     const el = getScrollable()
     if (!el) return
-    el.scrollBy({ left: el.clientWidth, behavior: "smooth" })
+    const firstChild = el.firstElementChild
+    if (!firstChild) return
+    const itemWidth = firstChild.clientWidth
+    el.scrollBy({ left: itemWidth, behavior: "smooth" })
   }
 
   const scrollPrev = () => {
     const el = getScrollable()
     if (!el) return
-    el.scrollBy({ left: -el.clientWidth, behavior: "smooth" })
+    const firstChild = el.firstElementChild
+    if (!firstChild) return
+    const itemWidth = firstChild.clientWidth
+    el.scrollBy({ left: -itemWidth, behavior: "smooth" })
   }
 
+
   return (
-    <div className="w-[95%] mx-auto mt-[50px]">
+    <div className="w-[95%] mx-auto mt-[50px] mb-20">
       <h1 className="w-auto text-center mx-auto font-garamond font-[400] text-[#403526] md:text-[32px] text-[18px]">
       Browse our Expert Diamond & Jewellery Guides
       </h1>
@@ -62,10 +70,10 @@ const Browse = () => {
                   key={idx}
                   className="basis-1/1 md:basis-1/2 xl:basis-1/3"
                 >
-                  <Important_C
+                  <Browse_C
 
                     img={card.img}
-                    h2={card.h2}
+                    heading={card.h2}
                     para={card.para}
 
                   />
@@ -78,7 +86,7 @@ const Browse = () => {
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            className="xl:hidden absolute left-[0px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+            className="absolute left-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
             <img src={leftIconSrc} alt="Previous" width={15} height={10} />
@@ -88,7 +96,7 @@ const Browse = () => {
           <button
             onClick={scrollNext}
             aria-label="Next"
-            className="xl:hidden absolute right-[0px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+            className="absolute right-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
             <img src={rightIconSrc} alt="Next" width={15} height={10} />

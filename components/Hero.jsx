@@ -28,13 +28,13 @@ const Hero = () => {
         Handcrafted by our expert Hatton Garden Jewellers, our diamond engagement rings are British heritage, heirloom-quality pieces. Every ring is a promise: exquisitely designed,  consciously crafted, and perfected to last lifetimes.
         Time to share your love story.
       </p>
-      <div className='flex items-center relative z-20 justify-center gap-3 w-[90%] md:w-[50%] '>
-        <button className='w-[48%] md:h-[45px] h-[33px] bg-[#FFFFFF] flex items-center justify-center font-[600] text-black
+      <div className='font-hiragino flex items-center relative z-20 justify-center gap-3 w-[90%] md:w-[50%] '>
+        <button className='w-[48%] md:h-[45px] h-[33px] bg-white/80 flex items-center justify-center font-[600] text-black
         md:text-[16px] text-[8px] cursor-pointer rounded-[3px] '>
               BOOK YOUR APPOINTMENT
         </button>
-        <button className='w-[48%] md:h-[45px] h-[33px] bg-[#FFFFFF] flex items-center justify-center font-[600] text-black
-        md:text-[16px] text-[8px] cursor-pointer rounded-[3px] '>
+        <button className='w-[48%] md:h-[45px] h-[33px] bg-white/80 flex items-center justify-center font-[600] text-black
+        md:text-[16px] text-[8px] font-hiragino cursor-pointer rounded-[3px] '>
               SHOP ENGAGEMENT RINGS
         </button>
       </div>

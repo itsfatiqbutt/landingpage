@@ -29,7 +29,7 @@ with the finest diamonds and heritage techniques.
               shopJew.map((item,idx) =>
               {
                 return (
-                  <CarouselItem key={idx} className="basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={idx} className="basis-1/2 lg:basis-1/3 xl:basis-1/4">
                     <ShopJewC key={`1${idx}`} img={item.img} link={item.link}></ShopJewC>
                   </CarouselItem>
                 )

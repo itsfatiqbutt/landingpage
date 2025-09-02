@@ -22,7 +22,27 @@ const Engagement = () => {
   const [canScrollPrev, setCanScrollPrev] = useState(false)
   const [canScrollNext, setCanScrollNext] = useState(false)
 
-  // Update scroll button availability
+  // robust step calculation (use offsetWidth to avoid subpixel surprises)
+  const getScrollStep = () => {
+    const el = containerRef.current
+    if (!el) return 0
+    const firstChild = el.children && el.children[0]
+    try {
+      const gapStyle = getComputedStyle(el).gap || "0px"
+      const gap = parseFloat(gapStyle) || 0
+
+      if (firstChild && typeof firstChild.getBoundingClientRect === 'function') {
+        // offsetWidth is integer px and avoids fractional subpixel math
+        const itemW = firstChild.offsetWidth
+        if (itemW > 0) return Math.round(itemW + gap)
+      }
+    } catch (e) {
+      // ignore
+    }
+
+    return Math.round(el.clientWidth / 2)
+  }
+
   const updateButtons = () => {
     const el = containerRef.current
     if (!el) return
@@ -30,63 +50,89 @@ const Engagement = () => {
     setCanScrollNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 5)
   }
 
+  // snap to nearest item (used on resize to avoid partial items)
+  const snapToNearest = () => {
+    const el = containerRef.current
+    if (!el) return
+    const step = getScrollStep()
+    if (!step) return
+    const idx = Math.round(el.scrollLeft / step)
+    const target = Math.min(idx * step, el.scrollWidth - el.clientWidth)
+    el.scrollTo({ left: Math.round(target), behavior: 'smooth' })
+  }
+
   useEffect(() => {
     updateButtons()
     const el = containerRef.current
     if (!el) return
     const onScroll = () => updateButtons()
-    window.addEventListener('resize', updateButtons)
+    const onResize = () => {
+      // wait a frame for layout to settle then snap
+      requestAnimationFrame(() => {
+        snapToNearest()
+        updateButtons()
+      })
+    }
+
+    window.addEventListener('resize', onResize)
     el.addEventListener('scroll', onScroll)
+
     return () => {
-      window.removeEventListener('resize', updateButtons)
+      window.removeEventListener('resize', onResize)
       el.removeEventListener('scroll', onScroll)
     }
   }, [])
 
-  // Scroll by one "page" (the visible width)
-  const scrollNext = () => {
+  const scrollByIndex = (dir) => {
     const el = containerRef.current
     if (!el) return
-    el.scrollBy({ left: el.clientWidth, behavior: 'smooth' })
+    const step = getScrollStep()
+    if (!step) return
+
+    const currentIndex = Math.round(el.scrollLeft / step)
+    const maxIndex = Math.ceil((el.scrollWidth - el.clientWidth) / step)
+    let nextIndex = dir === 'next' ? currentIndex + 1 : currentIndex - 1
+    nextIndex = Math.max(0, Math.min(nextIndex, maxIndex))
+
+    const target = Math.min(nextIndex * step, el.scrollWidth - el.clientWidth)
+    el.scrollTo({ left: Math.round(target), behavior: 'smooth' })
   }
 
-  const scrollPrev = () => {
-    const el = containerRef.current
-    if (!el) return
-    el.scrollBy({ left: -el.clientWidth, behavior: 'smooth' })
-  }
+  const scrollNext = () => scrollByIndex('next')
+  const scrollPrev = () => scrollByIndex('prev')
 
   return (
-    <div className="w-[90%] mx-auto mt-[60px]">
+    <div className="w-[90%] md:w-[94%] mx-auto mt-[60px]">
       <h1 className="font-garamond italic text-[20px] md:text-[40px] text-center font-[500]">
         Shop by Engagement Ring Style
       </h1>
+
       <p className="mt-[30px] font-helvetica mx-auto font-medium text-[10px] text-black md:text-[16px] text-center w-[80%] md:w-[67%]">
         Browse our exclusive engagement ring designs by categories and explore a range of timeless or modern styles to pair with your selected lab-grown or earth-mined diamond. Our engagement rings embody over a decade of expertise and uncompromising quality, specific only to Hatton Garden Jewellers & Craftsmen.
       </p>
 
       <div className="relative mt-[30px]">
-        {/* Horizontal scroll container. Each item width is responsive: 1/2 on small, 1/3 on md, 1/5 on xl+ */}
-        <div
-          ref={containerRef}
-          className="flex gap-4 overflow-x-auto scroll-pl-4 snap-x snap-mandatory px-4 py-2"
-          style={{ WebkitOverflowScrolling: 'touch' }}
-        >
-          {engagementsData.map((item, idx) => (
-            <div
-              key={idx}
-              className="snap-start w-1/2 md:w-1/3 xl:w-1/5 flex-shrink-0"
-            >
-              <Engagement_C img={item.img} link={item.link} />
-            </div>
-          ))}
+        {/* VIEWPORT */}
+        <div className="carousel-viewport">
+          {/* INNER TRACK */}
+          <div
+            ref={containerRef}
+            className="carousel-inner no-scrollbar"
+            aria-label="Engagement ring styles carousel"
+          >
+            {engagementsData.map((item, idx) => (
+              <div key={idx} className="carousel-item">
+                <Engagement_C img={item.img} link={item.link} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Prev button - minimal, no bg or hover, just pointer */}
+        {/* Prev button */}
         <button
           onClick={scrollPrev}
           aria-label="Previous"
-          className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+          className="absolute left-[-10px] md:left-[-20px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollPrev}
         >
@@ -97,7 +143,7 @@ const Engagement = () => {
         <button
           onClick={scrollNext}
           aria-label="Next"
-          className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+          className="absolute right-[-10px] md:right-[-20px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollNext}
         >

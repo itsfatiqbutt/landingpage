@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     // make footer a column flex so children can be pushed to the bottom
-    <footer className='w-full h-auto lg:h-[1000px] bg-[#A08579] p-2 md:p-20 relative flex flex-col'>
+    <footer className='w-full h-auto lg:[800px] 2xl:h-[762px]  bg-[#A08579] p-2 md:p-20 relative flex flex-col'>
       <div className='w-full px-5 md:px-0 mx-auto  flex flex-wrap gap-10'>
         <div className='flex flex-col gap-1'>
           <p className='font-[600] text-white text-[12px] w-full text-center md:text-left'>
@@ -39,9 +39,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='w-full flex items-start flex-wrap mt-5 gap-15 2xl:gap-30'>
+      <div className='w-full flex items-start flex-wrap mt-50 gap-15 2xl:justify-between 2xl:gap-30'>
         <div className='flex flex-col items-start gap-2'>
-          <h1 className='font-[600] text-white text-[14px] md:text-[16px]'>CUSTOMER SERVICE</h1>
+          <h1 className='font-hiragino font-[600] text-white text-[14px] md:text-[16px]'>CUSTOMER SERVICE</h1>
           <Link href="#" className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>Terms and Conditions</Link>
           <Link href="#" className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>Delivery and Returns</Link>
           <Link href="#" className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>Tax and Duty</Link>
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-col items-start gap-2'>
-          <h1 className='font-[600] text-white text-[14px] md:text-[16px]'>ABOUT US</h1>
+          <h1 className='font-hiragino font-[600] text-white text-[14px] md:text-[16px]'>ABOUT US</h1>
           <Link href="#" className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>Our Story</Link>
           <Link href="#" className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>Our Showroom</Link>
           <Link href="#" className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>The Journal</Link>
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-col items-start gap-2'>
-          <h1 className='font-[600] text-white text-[14px] md:text-[16px]'>CONTACT US</h1>
+          <h1 className='font-hiragino font-[600] text-white text-[14px] md:text-[16px]'>CONTACT US</h1>
           <p className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>+44 7518021455</p>
           <p className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>sales@flawlessfinejewelry.com</p>
           <p className='font-helvetica text-white text-[14px] font-[500] cursor-pointer hover:border-b '>Mon-Sat | 10:00am - 05:30pm</p>
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className='flex gap-3 relative p-1'>
-          <h1 className='font-[600] text-white text-[14px] md:text-[16px] absolute top-0 left-1/2 -translate-x-1/2 w-[100px] '>FOLLOW US</h1>
+          <h1 className='font-hiragino font-[600] text-white text-[14px] md:text-[16px] absolute top-0 left-1/2 -translate-x-1/2 w-[100px] '>FOLLOW US</h1>
           <div className='flex flex-col mt-10'>
             <Image src="/images/fi1.png" width={50} height={50} className="w-[42px] h-[42px] md:w-[50px] md:h-[50px]" />
             <Image src="/images/fi2.png" width={50} height={50} className="w-[42px] h-[42px] md:w-[50px] md:h-[50px]" />
@@ -104,7 +104,7 @@ const Footer = () => {
       </div>
 
       {/* CENTERED rows + copyright — pushed to bottom with mt-auto */}
-      <div className="w-full flex flex-col items-center gap-3 mt-auto pb-4">
+      <div className="w-full flex flex-col items-center gap-3 mt-auto">
         <div className="flex gap-3 items-center justify-center">
           <Image src="/images/f31.png" width={209} height={118} alt="img" className='w-[122px] h-[68px] md:w-[209px] md:h-[118px]' />
           <Image src="/images/f32.png" width={150} height={61} alt="img" className='w-[103px] h-[42px] md:w-[215px] md:h-[61px]' />
@@ -120,7 +120,7 @@ const Footer = () => {
           <Image src="/images/f46.png" width={42} height={28} alt="img" className='w-[25px] h-[17px] md:w-[42px] md:h-[28px]' />
         </div>
 
-        <p className='text-center text-[9px] text-white font-[500] font-inter'>
+        <p className='font-hiragino text-center text-[9px] text-white font-[500] font-inter'>
           © 2025 Flawless Fine Jewellery LTD. All Rights Reserved.
         </p>
       </div>

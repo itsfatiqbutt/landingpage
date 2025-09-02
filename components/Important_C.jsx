@@ -13,7 +13,7 @@ const Important_C = ({ heading, img, h2, para, tag, noWidth = false }) => {
         {/* badge — only render if tag.para exists */}
         {tag?.para && (
           <div className="absolute top-4 left-4 z-20 bg-[#998176] rounded-[3px] text-white px-4 py-3 text-[11px] md:text-[16px] flex items-center justify-center gap-2 px-3">
-            <span className="whitespace-nowrap">{tag.para}</span>
+            <span className="whitespace-nowrap font-hiragino">{tag.para}</span>
             {tag?.icon ? (
               <div className="w-[16px] h-[16px] md:w-[20px] md:h-[20px] relative">
                 <Image src={tag.icon} alt={`${tag.para} icon`} fill className="object-contain" />
@@ -27,8 +27,8 @@ const Important_C = ({ heading, img, h2, para, tag, noWidth = false }) => {
       </div>
 
       <div className="flex items-center gap-2">
-        <h2 className="text-[12px] md:text-[18px] text-[#403526] font-semibold">{h2}</h2>
-        <div className="w-[6px] h-[4px] md:w-[11px] md:h-[7px] relative">
+        <h2 className="font-hiragino text-[12px] md:text-[18px] text-[#403526] font-semibold">{h2}</h2>
+        <div className="w-[6px] h-[4px] md:w-[20px] md:h-[14px] relative">
           <Image src="/images/arr-left.svg" fill alt="arrow" className="object-contain" />
         </div>
       </div>

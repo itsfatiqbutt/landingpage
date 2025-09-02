@@ -58,38 +58,38 @@ const Header = () => {
     <>
       <div
         className="w-full h-[16px] md:h-[33px] 2xl:h-[46px]
-                  bg-[#806C63] flex items-center justify-center text-[11px] md:text-[20px] 2xl:text-[22px] text-white "
+                  bg-[#806C63] flex items-center justify-center text-[11px] md:text-[20px] 2xl:text-[22px] text-white  "
       >
         Hatton Garden Jewellers
       </div>
 
-      <div className="w-full flex items-center md:pl-9 pt-2 md:pt-5 md:pr-3 px-1 w-full bg-white h-auto relative">
-        <h1 className="text-[13px] md:text-[22px]  font-[600] text-black tracking-[10px]">
+      <div className="w-full flex items-center md:pl-9 pt-2 pb-4 md:pt-5 md:pr-3 px-1 w-full bg-white h-auto relative">
+        <h1 className="font-hiragino text-[13px] md:text-[22px]  font-[600] text-black tracking-[7px]">
           FLAWLESS
         </h1>
 
-        <div className="xl:flex items-center justify-center gap-5 ml-[10px] hidden ">
-          <Link href="#" className=" text-[12px] text-black font-[600]">
+        <div className="xl:flex items-center justify-center gap-4 2xl:gap-20 xl:ml-[20px] hidden ">
+          <Link href="#" className="font-hiragino text-[12px] text-black font-[600]">
             ENGAGEMENT
           </Link>
-          <Link href="#" className=" text-[12px] text-black font-[600]">
+          <Link href="#" className="font-hiragino  text-[12px] text-black font-[600]">
             WEDDING
           </Link>
-          <Link href="#" className=" text-[12px] text-black font-[600]">
+          <Link href="#" className="font-hiragino  text-[12px] text-black font-[600]">
             JEWELLERY
           </Link>
-          <Link href="#" className=" text-[12px] text-black font-[600]">
+          <Link href="#" className="font-hiragino  text-[12px] text-black font-[600]">
             DIAMONDS
           </Link>
-          <Link href="#" className=" text-[12px] text-black font-[600]">
+          <Link href="#" className="font-hiragino  text-[12px] text-black font-[600]">
             GEMSTONE
           </Link>
-          <Link href="#" className=" text-[12px] text-black font-[600]">
+          <Link href="#" className="font-hiragino  text-[12px] text-black font-[600]">
             ABOUT
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 ml-auto">
+        <div className="flex items-center gap-2 2xl:gap-4 ml-auto">
           {/* SEARCH ICON & INPUT */}
           <div id="header-search-container" className="relative">
             <button
@@ -136,12 +136,12 @@ const Header = () => {
             <div className="w-[23px] h-[30px] relative">
               <Image src="/images/profile.png" fill className="absolute" alt="profile" />
             </div>
-            <p className="font-[600] text-[12px] text-black">Account</p>
+            <p className="font-hiragino font-[600] text-[12px] text-black">Account</p>
           </div>
 
           <Link
             href="#"
-            className="w-[151px] h-[30px] ml-[10px] hidden xl:flex items-center justify-center font-[600] bg-[#A39186]
+            className="font-hiragino w-[151px] h-[30px] ml-[10px] hidden xl:flex items-center justify-center font-[600] bg-[#A39186]
              text-white cursor-pointer rounded-[3px] text-[12px] hover:bg-[#806C63]"
           >
             Book Appointment
@@ -158,21 +158,21 @@ const Header = () => {
             <div className="md:w-[27px] md:h-[24px] w-[10px] h-[10px] relative">
               <Image src="/images/heart.png" fill className="absolute" alt="wishlist" />
             </div>
-            <p className="text-[9px] md:text-[12px] text-black ">Wishlist</p>
+            <p className="font-hiragino text-[9px] md:text-[12px] text-black ">Wishlist</p>
           </div>
 
           <div className="flex items-center justify-center gap-1">
             <div className="md:w-[18px] md:h-[18px] w-[10px] h-[10px] relative">
               <Image src="/images/cart.png" fill className="absolute" alt="cart" />
             </div>
-            <p className="text-[9px] md:text-[12px] text-black md:block hidden ">Cart</p>
+            <p className="font-hiragino text-[9px] md:text-[12px] text-black md:block hidden ">Cart</p>
           </div>
 
           <div className="flex items-center justify-center gap-1 mr-4 md:mr-0">
             <div className="md:w-[25px] md:h-[22px] w-[8px] h-[8px] relative">
               <Image src="/images/country.png" fill className="absolute" alt="country" />
             </div>
-            <p className="text-[8px] md:text-[10px] md:text-[12px] text-black ">GBP</p>
+            <p className="font-hiragino text-[8px] md:text-[10px] md:text-[12px] text-black ">GBP</p>
             <div className="w-[10px] h-[5px] relative">
               <Image src="/images/arrowDown.svg" fill className="absolute" alt="arrow" />
             </div>

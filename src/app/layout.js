@@ -1,6 +1,6 @@
 
 import "./globals.css";
-import { inter,ebGaramond } from "../../fonts.js";
+import { inter,ebGaramond,notoSans,helveticaNow } from "../../fonts.js";
 
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${ebGaramond.variable}`}>
+    <html lang="en" className={`${inter.variable} ${helveticaNow.variable} ${notoSans.variable} ${ebGaramond.variable}`}>
       <body
 
       >

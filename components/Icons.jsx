@@ -22,15 +22,15 @@ export default function Icons() {
   const rows = chunk(ICONS, 3)
 
   return (
-    <div className="w-full mt-[60px] px-4 overflow-x-hidden">
+    <div className="w-full mt-20 px-4">
       {/* MOBILE: 3 rows (3,3,2) */}
       <div className="block md:hidden">
         {rows.map((row, rowIndex) => (
-          <div key={rowIndex} className="flex w-full justify-center items-start gap-6 mb-4">
+          <div key={rowIndex} className="flex w-full justify-center  items-start gap-6 mb-4">
             {row.map((item) => (
               <div key={item.src} className="w-1/3 sm:w-1/4 flex-shrink-0 px-2">
                 <div className="flex flex-col items-center justify-start min-h-[110px]">
-                  <div className="flex items-center justify-center h-[58px]">
+                  <div className="flex items-center justify-center  h-[58px]">
                     <Image src={item.src} width={55} height={58} alt={item.alt} />
                   </div>
                   <p className="mt-2 text-center text-sm md:text-[12px] font-helvetica font-[400] leading-tight whitespace-normal break-words">
@@ -44,8 +44,8 @@ export default function Icons() {
       </div>
 
       {/* DESKTOP: single non-wrapping row with all icons */}
-      <div className="hidden md:flex w-full justify-center">
-        <div className="flex items-start gap-6 flex-nowrap">
+      <div className="hidden md:flex w-full justify-center ">
+        <div className="flex items-start gap-6 2xl:gap-20 flex-nowrap">
           {ICONS.map((item) => (
             <div
               key={item.src}

@@ -14,7 +14,7 @@ const Curated = () => {
   return (
     <>
       {/* use a stable min-height so the section doesn't shrink/grow with slides */}
-      <div className="w-full md:min-h-[520px] min-h-[440px] flex flex-col md:flex-row items-stretch justify-center mt-[60px] gap-4">
+      <div className="w-full md:min-h-[520px] min-h-[440px] flex flex-col md:flex-row items-stretch justify-center mt-[60px]">
 
         {/* Carousel Column */}
         <div className="order-2 md:order-1 w-full md:w-[78%] flex-1 h-full relative">
@@ -54,8 +54,8 @@ const Curated = () => {
         </div>
 
         {/* Text Column */}
-        <div className="order-1 md:order-2 w-full md:w-[21%] flex flex-col justify-center h-full gap-5 px-4">
-          <p className="mx-auto w-[80%] md:w-full md:text-[18px] text-[12px] text-black font-[600] text-center md:text-left">
+        <div className="order-1 md:order-2 w-full md:w-[21%] flex flex-col justify-center h-full gap-5 pr-4">
+          <p className="font-hiragino mx-auto w-[80%] md:w-full md:text-[18px] text-[12px] text-black font-[600] text-center md:text-left">
             CURATED COLLECTION
           </p>
           <p className="mx-auto w-[80%] md:w-full text-[24px] md:text-[32px] text-black font-garamond font-[400] text-center md:text-left italic">

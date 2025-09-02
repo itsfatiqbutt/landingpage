@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const Engagement_C = ({ img, link }) => {
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="w-[159px] md:w-full flex flex-col gap-2 md:gap-4">
       {/* Aspect box */}
       <div className="relative w-full pb-[146.5%] overflow-hidden">
         <Image
@@ -21,7 +21,7 @@ const Engagement_C = ({ img, link }) => {
         />
       </div>
 
-      <Link href="#" className="font-[600] w-full text-[16px] md:text-[20px] text-black text-center">
+      <Link href="#" className="font-[600] font-hiragino w-full text-[10px] md:text-[20px] text-black text-center">
         {link}
       </Link>
     </div>

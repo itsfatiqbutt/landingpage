@@ -47,12 +47,12 @@ const Importants = () => {
   }
 
   return (
-    <div className="w-[95%] mx-auto mt-[50px]">
+    <div className="w-[95%] mx-auto mt-20">
       <h1 className="w-auto text-center mx-auto font-garamond font-[400] text-[#403526] md:text-[32px] text-[18px]">
         What’s more important to you?...
       </h1>
 
-      <div className="flex flex-col md:flex-row items-start md:items-stretch justify-between mt-[15px] md:mt-[70px] gap-8">
+      <div className="flex flex-col md:flex-row items-start md:items-stretch justify-between mt-15 md:mt-27 gap-8">
         <div className="relative w-full" ref={carouselRef}>
           <Carousel className="w-full px-3">
             <CarouselContent>

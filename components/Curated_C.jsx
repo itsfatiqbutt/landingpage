@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Curated_C = ({ img, name, price }) => {
   return (
-    <div className="h-full w-full flex flex-col">
+    <div className="h-full w-[169px] md:w-full flex flex-col">
       {/* fixed image area to reserve space and avoid layout shifts */}
       <div className="relative w-full h-[320px] md:h-[420px] flex-shrink-0">
         <Image

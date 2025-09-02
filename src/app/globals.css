@@ -10,11 +10,17 @@
 }
 
 .font-helvetica {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--font-helvetica-now), Helvetica, Arial, sans-serif;
 }
+
 .font-inter {
   font-family: var(--font-inter), sans-serif;
 }
+.font-hiragino {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -130,4 +136,113 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+/* ba/* ---------- Carousel final CSS (mobile: fixed 159px, md: 3-per-row, xl: 5x348px) ---------- */
+
+:root {
+  --carousel-gap: 1rem;   /* gap-4 = 16px */
+  --carousel-pad: 1rem;   /* px-4 = 16px */
+  --card-w-sm: 162px;     /* mobile card width you asked for */
+  --card-w-xl: 348px;     /* desktop card width (unchanged) */
+}
+
+/* VIEWPORT: visible window; keep left/right breathing room on small screens */
+.carousel-viewport {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-inline: var(--carousel-pad);
+  box-sizing: border-box;
+}
+
+/* INNER TRACK: holds gap and is scrollable (viewport handles padding) */
+.carousel-inner {
+  display: flex;
+  gap: var(--carousel-gap);
+  padding: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+/* hide scrollbars visually but preserve interaction */
+.carousel-inner.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel-inner.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* MOBILE (default): fixed 159px card width so two full cards fit */
+.carousel-item {
+  flex: 0 0 var(--card-w-sm);
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+/* preserve slide content box-sizing and prevent unexpected horizontal margins */
+.carousel-item > * {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* images inside slides behave nicely */
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* MD: responsive 3 items (keeps the previous scaling behavior) */
+@media (min-width: 768px) {
+  .carousel-item {
+    flex: 0 0 calc((100% - (var(--carousel-pad) * 2) - (var(--carousel-gap) * 2)) / 3);
+  }
+}
+
+/* XL: fixed 5×348px viewport and fixed item width (unchanged) */
+@media (min-width: 1280px) {
+  .carousel-viewport {
+    width: calc((var(--card-w-xl) * 5) + (var(--carousel-gap) * 4) + (var(--carousel-pad) * 2));
+    max-width: 100%;
+  }
+
+  .carousel-item {
+    flex: 0 0 var(--card-w-xl);
+  }
+}
+
+
+
+/* ---- Accordion custom icon + layout ---- */
+/* hide library default chevrons (if any) inside the trigger */
+.acc-trigger svg {
+  display: none !important;
+}
+
+/* our icon default state */
+.acc-trigger-icon {
+  transition: transform 200ms ease;
+  transform: rotate(0deg);
+  transform-origin: center;
+  display: inline-block;
+}
+
+/* rotate when open — cover common patterns */
+[data-state="open"] .acc-trigger-icon,
+[aria-expanded="true"] .acc-trigger-icon,
+.accordion-item[data-state="open"] .acc-trigger-icon {
+  transform: rotate(180deg);
+}
+
+/* layout of trigger row with a modest gap (8px) */
+.acc-trigger {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* <-- controls spacing between icon and text */
 }
