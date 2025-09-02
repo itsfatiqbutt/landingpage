@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const DesignYO = () => {
   return (
-    <div className="w-full md:w-[90%] m-auto h-auto md:h-[828px] flex flex-col md:flex-row items-stretch justify-center gap-1 md:gap-8 py-8">
+    <div className="w-full mt-[214px] md:w-[98%] m-auto h-auto md:h-[828px] flex flex-col md:flex-row items-stretch justify-center gap-1 md:gap-8 py-8">
       {/* Image column */}
-      <div className="md:w-1/2 w-full relative md:h-full h-[157px] ">
+      <div className="md:w-1/2 w-full relative md:h-[828px] md:w-[653px] h-[157px] ">
 
         <div className='bg-[#806C63] flex items-center justify-center absolute z-10 h-[38px] w-full md:hidden font-[500] text-[12px] text-white  '>
           Do you have something special in mind?
@@ -20,8 +20,8 @@ const DesignYO = () => {
       </div>
 
       {/* Text column: everything centered except the UL which is self-start (left) */}
-      <div className="md:w-1/2 w-full h-auto px-6 md:px-12 flex flex-col items-center justify-center ">
-        <h1 className="font-garamond text-black font-[500] italic text-[24px] md:text-[32px] w-full text-center">
+      <div className="md:w-1/2 w-full h-auto px-6 mt-[67px] md:px-0 flex flex-col items-center justify-center ">
+        <h1 className="font-garamond md:mb-[-20px] text-black font-[500] italic text-[24px] md:text-[32px] w-full text-center">
           Design Your Own Bespoke Ring.
         </h1>
 
@@ -53,7 +53,7 @@ const DesignYO = () => {
         </ul>
 
         {/* Centered CTA */}
-        <button className="mt-10 w-[253px] h-[30px] leading-[30px] md:h-[68px] md:leading-[68px] font-hiragino w-[80%] md:w-[60%] 2xl:w-[483px] rounded-[6px] bg-[#EDE7E5] text-[8px] md:text-[12px] lg:text-[16px] text-black text-center">
+        <button className="mt-10 w-[253px] h-[30px] leading-[30px] md:h-[68px] md:leading-[68px] font-hiragino w-[80%] md:w-[60%] 2xl:w-[483px] rounded-[6px] bg-[#EDE7E5] text-[8px] md:text-[12px] text-black text-center">
   BOOK A COMPLIMENTARY CONSULTATION
 </button>
 

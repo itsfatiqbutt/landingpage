@@ -55,11 +55,13 @@ const Browse = () => {
 
 
   return (
-    <div className="w-[95%] mx-auto mt-[50px] mb-20">
+    <div className="w-[95%] mx-auto mt-[98px] mb-20">
       <h1 className="w-auto text-center mx-auto font-garamond font-[400] text-[#403526] md:text-[32px] text-[18px]">
       Browse our Expert Diamond & Jewellery Guides
       </h1>
-      <p className="font-helvetica font-medium text-[10px] w-[90%] text-center md:w-[60%] mx-auto md:text-[20px] text-black "></p>
+      <p className="mt-[20px] md:mt-[50px] font-helvetica font-medium text-[10px] w-[90%] text-center md:w-[60%] mx-auto md:text-[16px] text-black font-[500] ">
+      Take a quick look at our featured diamond & jewellery resources or go to our Complete Guides Page written and curated by our expert jewellers in Hatton Garden.
+      </p>
 
       <div className="flex flex-col md:flex-row items-start md:items-stretch justify-between mt-[15px] md:mt-[70px] gap-8">
         <div className="relative w-full" ref={carouselRef}>

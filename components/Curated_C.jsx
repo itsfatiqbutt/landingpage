@@ -21,7 +21,7 @@ const Curated_C = ({ img, name, price }) => {
       </p>
 
       {/* price area: small, fixed height */}
-      <p className="font-garamond text-[10px] md:text-[14px] font-[600] mt-[-6px] text-left w-full h-[20px] md:h-[22px] overflow-hidden">
+      <p className="font-garamond text-[10px] md:text-[14px] font-[600] md:mt-[-26px] text-left w-full h-[20px] md:h-[22px] overflow-hidden">
         {price}
       </p>
     </div>

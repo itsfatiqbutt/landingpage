@@ -14,25 +14,25 @@ const WhatsNew = () => {
   return (
     <>
       {/* Section: md = horizontal, mobile = stacked */}
-      <div className="w-full md:h-auto py-20 h-[600px] flex flex-col md:flex-row items-center justify-center mt-[60px] gap-6 bg-[#EDE7E5]">
+      <div className="w-full md:h-auto py-20 h-[600px] flex flex-col md:flex-row gap-5 md:gap-0 items-center justify-center mt-[70px] md:mt-[172px] gap-6 bg-[#EDE7E5]">
         {/* changed items-stretch -> items-center */}
 
         {/* Text Column */}
-        <div className="order-1 md:order-1 w-full md:w-[25%] flex flex-col items-center md:items-start justify-center h-full gap-5 px-6">
+        <div className="order-1 md:order-1 w-full md:w-[27%] flex flex-col items-center md:items-start justify-center h-full pl-6 md:pl-[64px]">
           <p className="w-[80%] md:w-full md:text-[18px] text-[14px] text-black font-[600] text-center md:text-left">
             SHOP
           </p>
 
-          <p className="w-[80%] md:w-full text-[24px] md:text-[32px] text-black font-garamond font-[400] text-center md:text-left italic">
+          <p className="w-[80%] mt-[10px] md:w-full text-[24px] md:text-[32px] text-black font-garamond font-[400] text-center md:text-left italic">
             What’s New & Trending?
           </p>
 
-          <p className="w-[80%] md:w-full font-helvetica font-[500] text-[14px] md:text-[15px] text-black text-center md:text-left">
+          <p className="mt-[39px] w-[80%] md:w-full font-helvetica font-[500] text-[14px] md:text-[15px] text-black text-center md:text-left">
             A space to find the latest designs, encounter the most loved diamond rings and browse enchanting coloured gemstone collections.
           </p>
 
           {/* Desktop CTA (hidden on small screens) */}
-          <button className="hidden md:flex w-full md:w-[90%] bg-[#998176] mt-4 h-[57px] border items-center justify-center md:text-[13px] text-[11px] rounded-[6px] text-white">
+          <button className="hidden md:flex w-full md:w-[90%] bg-[#998176] md:mt-[70px] h-[57px] border items-center justify-center md:text-[13px] text-[11px] rounded-[6px] text-white">
             BOOK A CONSULTATION
           </button>
         </div>

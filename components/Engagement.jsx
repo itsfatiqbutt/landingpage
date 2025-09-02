@@ -102,7 +102,7 @@ const Engagement = () => {
   const scrollPrev = () => scrollByIndex('prev')
 
   return (
-    <div className="w-[90%] md:w-[94%] mx-auto mt-[60px]">
+    <div className="w-[90%] md:w-[94%] mx-auto mt-[80px] ">
       <h1 className="font-garamond italic text-[20px] md:text-[40px] text-center font-[500]">
         Shop by Engagement Ring Style
       </h1>
@@ -132,7 +132,7 @@ const Engagement = () => {
         <button
           onClick={scrollPrev}
           aria-label="Previous"
-          className="absolute left-[-10px] md:left-[-20px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+          className="absolute left-[-10px] md:left-[-35px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollPrev}
         >
@@ -143,7 +143,7 @@ const Engagement = () => {
         <button
           onClick={scrollNext}
           aria-label="Next"
-          className="absolute right-[-10px] md:right-[-20px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+          className="absolute right-[-10px] md:right-[-35px] border border-black top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollNext}
         >

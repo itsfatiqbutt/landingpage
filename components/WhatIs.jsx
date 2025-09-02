@@ -16,7 +16,7 @@ export default function WhatIs() {
   const toggle = (index) => setOpenIndex(prev => (prev === index ? -1 : index));
 
   return (
-    <div className="pt-0 pb-10 w-full flex md:py-20 flex-col md:flex-row items-center justify-around bg-[#EDE7E5] mt-[80px]">
+    <div className="pt-0 pb-10 w-full flex md:py-20 flex-col md:flex-row items-center justify-around bg-[#EDE7E5] mt-[169px]">
       <div className="w-full md:w-[45%] flex flex-col items-center justify-center gap-10">
         <h1 className=" w-full bg-[#806C63] md:bg-transparent text-center font-garamond italic font-[500] text-[20px] md:text-[40px] text-white md:text-[#806C63]">
           What is Bespoke Diamond Jewellery
@@ -28,7 +28,7 @@ export default function WhatIs() {
           in Hatton Garden, London are experts at working with customers all over the world to bring their
           bespoke visions to life.
         </p>
-        <button className="font-hiragino hidden mx-auto w-[50%] rounded-[6px] md:h-[48px] bg-[#806C63] text-white text-[10px] md:text-[15px] md:flex items-center justify-center font-[300]">
+        <button className="mt-[50px] font-hiragino hidden mx-auto w-[50%] rounded-[6px] md:h-[48px] bg-[#806C63] text-white text-[10px] md:text-[15px] md:flex items-center justify-center font-[300]">
           BOOK A FREE CONSULTATION
         </button>
       </div>

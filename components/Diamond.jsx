@@ -12,12 +12,12 @@ import { diamondsData } from '../data/diamondsData';
 import Diamond_C from './Diamond_C';
 const Diamond = () => {
   return (
-    <div className='w-full mt-[60px]'>
+    <div className='w-full mt-[143px]'>
       <h1 className='w-full text-center font-garamond font-[500] italic text-[20px] md:text-[40px]  mx-auto'>
         Shop by Diamond Shape
       </h1>
 
-      <div className='w-full  mx-auto flex items-center justify-center'>
+      <div className='w-full  mx-auto flex items-center justify-center mt-[63px]'>
         <Carousel className="w-full px-12 ">
           <CarouselContent>
           {diamondsData.map((item, index) => (
@@ -30,14 +30,14 @@ const Diamond = () => {
 ))}
           </CarouselContent>
 
-          <CarouselPrevious className="absolute !z-20 !opacity-0 left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+          <CarouselPrevious className="absolute !z-20 !opacity-0 left-[10px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
           </CarouselPrevious>
 
           {/* Custom Next Arrow */}
-          <CarouselNext className="absolute !z-20 !opacity-0  right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+          <CarouselNext className="absolute !z-20 !opacity-0  right-[10px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
           </CarouselNext>
-          <Image src="/images/cr-left.svg" width={15} height={24} alt="img" className="absolute z-10 left-2 top-1/2 -translate-y-1/2"></Image>
-          <Image src="/images/cr-right.svg" width={15} height={24} alt="img" className="absolute z-10 right-2 top-1/2 -translate-y-1/2"></Image>
+          <Image src="/images/cr-left.svg" width={15} height={24} alt="img" className="absolute z-10 left-[10px] top-1/2 -translate-y-1/2"></Image>
+          <Image src="/images/cr-right.svg" width={15} height={24} alt="img" className="absolute z-10 right-[10px] top-1/2 -translate-y-1/2"></Image>
         </Carousel>
       </div>
     </div>

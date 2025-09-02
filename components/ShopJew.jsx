@@ -13,7 +13,7 @@ import {
 
 const ShopJew = () => {
   return (
-  <div className='w-full md:w-[90%] mx-auto mt-[60px]'>
+  <div className='w-full md:w-[90%] mx-auto mt-[139px]'>
    <h1 className='w-full text-center font-garamond font-[500] italic text-[20px] md:text-[40px]  mx-auto'>
    Shop Jewellery
       </h1>
@@ -23,7 +23,7 @@ with the finest diamonds and heritage techniques.
       </p>
 
     <div className='w-full mx-auto mt-[30px] md:mt-[40px]'>
-    <Carousel className="w-full px-8 md:px-12 ">
+    <Carousel className="w-full px-8 md:px-0  ">
           <CarouselContent>
             {
               shopJew.map((item,idx) =>
@@ -38,14 +38,15 @@ with the finest diamonds and heritage techniques.
 
 
           </CarouselContent>
-          <CarouselPrevious className="absolute !z-20  left-0 !opacity-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+          <CarouselPrevious className="absolute !z-20 left-0   md:left-[-67px] !opacity-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
           </CarouselPrevious>
 
           {/* Custom Next Arrow */}
-          <CarouselNext className="absolute !z-20  right-0 !opacity-0  md:right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+          <CarouselNext className="absolute !z-20  right-0 !opacity-0  md:right-[-67px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
           </CarouselNext>
-          <Image src="/images/cr-left.svg" width={15} height={24} alt="img" className="absolute z-10 left-0 top-1/2 -translate-y-1/2"></Image>
-          <Image src="/images/cr-right.svg" width={15} height={24} alt="img" className="absolute z-10 right-0 top-1/2 -translate-y-1/2"></Image>
+          <Image src="/images/cr-left.svg" width={15} height={24} alt="img" className="absolute z-10 left-0 md:left-[-67px]
+           top-1/2 -translate-y-1/2"></Image>
+          <Image src="/images/cr-right.svg" width={15} height={24} alt="img" className="absolute z-10 right-0 md:right-[-67px] top-1/2 -translate-y-1/2"></Image>
         </Carousel>
     </div>
   </div>

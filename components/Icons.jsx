@@ -22,7 +22,7 @@ export default function Icons() {
   const rows = chunk(ICONS, 3)
 
   return (
-    <div className="w-full mt-20 px-4">
+    <div className="w-full mt-20 md:mt-[98px] px-4">
       {/* MOBILE: 3 rows (3,3,2) */}
       <div className="block md:hidden">
         {rows.map((row, rowIndex) => (
