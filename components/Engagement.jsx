@@ -132,7 +132,7 @@ const Engagement = () => {
         <button
           onClick={scrollPrev}
           aria-label="Previous"
-          className="absolute left-[-10px] md:left-[-35px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+          className="absolute left-[-10px] md:left-[-25px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollPrev}
         >
@@ -143,7 +143,7 @@ const Engagement = () => {
         <button
           onClick={scrollNext}
           aria-label="Next"
-          className="absolute right-[-10px] md:right-[-35px] border border-black top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+          className="absolute right-[-10px] md:right-[-25px] border border-black top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollNext}
         >

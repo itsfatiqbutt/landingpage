@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     // make footer a column flex so children can be pushed to the bottom
-    <footer className='w-full h-auto lg:[800px] 2xl:h-[762px]  bg-[#A08579] p-2 md:p-20 relative flex flex-col mt-[47px]'>
+    <footer className='w-full h-auto lg:[1000px] 2xl:max-h-[1200px]  bg-[#A08579] p-2 md:p-20 relative flex flex-col mt-[47px]'>
       <div className='w-full px-5 md:px-0 mx-auto  flex flex-wrap gap-10'>
         <div className='flex flex-col gap-1'>
           <p className='font-[600] text-white text-[12px] w-full text-center md:text-left'>

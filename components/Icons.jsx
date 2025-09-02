@@ -44,8 +44,8 @@ export default function Icons() {
       </div>
 
       {/* DESKTOP: single non-wrapping row with all icons */}
-      <div className="hidden md:flex w-full justify-center ">
-        <div className="flex items-start gap-6 2xl:gap-20 flex-nowrap">
+      <div className="hidden md:flex w-full items-center justify-center 2xl:justify-between">
+        <div className="flex items-start gap-6 2xl:gap-10 flex-wrap">
           {ICONS.map((item) => (
             <div
               key={item.src}
