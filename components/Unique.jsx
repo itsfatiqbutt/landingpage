@@ -7,7 +7,7 @@ const Unique = () => {
       <p className="md:w-full text-[24px] md:text-[32px] [@media(min-width:1900px)]:text-[40px] text-black font-garamond font-[400] text-center italic">
       Rare Stones for Unique Love Stories
           </p>
-      <div className='w-full flex flex-col md:flex-row items-center justify-between mt-15'>
+      <div className='w-full flex flex-col md:flex-row items-start justify-between mt-15'>
       <div className='w-full mb-10 md:mb-0 md:w-[47%] flex flex-col gap-5'>
         <Image src="/images/un1.png" width={795} height={403} alt="img" className='w-full h-auto object-contain'></Image>
         <h1 className='font-helvetica font-[400] text-[20px] md:text-[32px] [@media(min-width:1900px)]:text-[36px] text-black text-center md:text-left w-full'>
