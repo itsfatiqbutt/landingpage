@@ -19,7 +19,7 @@ export default function Icons() {
         className="
           flex flex-wrap items-start
           justify-center md:justify-between
-          gap-6
+          gap-2 md:gap-6
         "
       >
         {ICONS.map((item) => (
@@ -27,7 +27,7 @@ export default function Icons() {
             key={item.src}
             className="
               flex flex-col items-center text-center
-              min-w-[120px] max-w-[160px] flex-1 px-2
+              min-w-[110px] max-w-[120px] md:min-w-[120px] md:max-w-[160px] flex-1 px-2
             "
           >
             <div className="h-[58px] flex items-center justify-center">

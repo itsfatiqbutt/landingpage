@@ -9,7 +9,7 @@ const Important_C = ({ heading, img, h2, para, tag, noWidth = false }) => {
         {heading}
       </h1>
 
-      <div className="w-full h-[358px] md:h-[563px] relative overflow-hidden rounded-sm">
+      <div className="w-full h-[358px] md:h-[563px] relative overflow-hidden">
         {/* badge — only render if tag.para exists */}
         {tag?.para && (
           <div className="absolute top-[17px] left-4 z-20 bg-[#998176] rounded-[3px] text-white px-4 py-3 text-[11px] md:text-[16px] flex items-center justify-center gap-2 px-3">

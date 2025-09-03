@@ -26,7 +26,7 @@ const DesignYO = () => {
         </h1>
 
         <p className="mt-4 md:mt-10 font-hiragino font-[600] text-[12px] md:text-[16px] text-black w-full 2xl:w-[70%] text-center">
-          Go on a journey to design your ring from scratch,<br className='hidden md:visible' /> with one of our expert
+          Go on a journey to design your ring from scratch,<br className='hidden md:block' /> with one of our expert
           jewellers in Hatton Garden, London.
         </p>
 

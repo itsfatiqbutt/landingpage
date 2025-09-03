@@ -14,7 +14,7 @@ import {
 const ShopJew = () => {
   return (
   <div className='w-full md:w-[90%] mx-auto mt-[50px] md:mt-[139px]'>
-   <h1 className='hidden md:visible w-full text-center font-garamond font-[500] italic text-[20px] md:text-[32px] [@media(min-width:1900px)]:text-[40px]  mx-auto'>
+   <h1 className='hidden md:block w-full text-center font-garamond font-[500] italic text-[20px] md:text-[32px] [@media(min-width:1900px)]:text-[40px]  mx-auto'>
    Shop Jewellery
       </h1>
       <h1 className='md:hidden  w-full text-center font-garamond font-[500] italic text-[20px] md:text-[32px] [@media(min-width:1900px)]:text-[40px]  mx-auto'>

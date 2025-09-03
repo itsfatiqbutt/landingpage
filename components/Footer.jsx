@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#A08579] p-2 xl:p-20 flex flex-col mt-[47px]">
+    <footer className="w-full bg-[#A08579] p-2 pl-3  xl:p-20 flex flex-col mt-[47px]">
       {/* top row: title + small white cards */}
       <div className="w-full px-5 md:px-0 mx-auto flex flex-wrap gap-6 justify-center  items-center">
         <div className="flex flex-col gap-1 flex-shrink-0">
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
 
         <div className="w-1/2 sm:w-1/2 md:w-auto w-[170px] ml-[40px] sm:ml-0 md:flex-1 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
-          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px]">ABOUT US</h2>
+          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px] translate-x-[15px] md:translate-x-0">ABOUT US</h2>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Our Story</Link>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Our Showroom</Link>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">The Journal</Link>
@@ -68,14 +68,14 @@ const Footer = () => {
         <div className="w-1/2 sm:w-1/2 md:w-auto w-[170px] md:flex-1 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
           <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px]">CONTACT US</h2>
           <p className="font-helvetica text-white text-[14px] font-[500]">+44 7518021455</p>
-          <p className="font-helvetica text-white text-[10px] sm:text-[14px] font-[500]">sales@flawlessfinejewelry.com</p>
+          <p className="font-helvetica text-white text-[14px] sm:text-[14px] font-[500]">sales@flawlessfinejewelry.com</p>
           <p className="font-helvetica text-white text-[14px] font-[500]">Mon-Sat | 10:00am - 05:30pm</p>
           <p className="font-helvetica text-white text-[14px] font-[500]">Sun | 11:00am - 3:30pm</p>
           <p className="font-helvetica text-white text-[14px] font-[500]">107 Hatton Garden, London EC1N8LY</p>
         </div>
 
         <div className="w-1/2 sm:w-1/2 md:w-auto  w-[130px] md:flex-1 ml-[60px] sm:ml-0 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
-          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px]">FOLLOW US</h2>
+          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px] translate-x-[15px] md:translate-x-0">FOLLOW US</h2>
           <div className="flex gap-4 mt-2">
             <div className="flex flex-col gap-3">
               <Image src="/images/fi1.png" width={50} height={50} alt="img" className="w-[42px] h-[42px] md:w-[50px] md:h-[50px]" />
@@ -93,7 +93,7 @@ const Footer = () => {
         {/* Subscription box: centered on mobile, right on large screens */}
         <div className="w-full md:w-[343px] mt-4 md:mt-0 order-last md:order-none">
           <p className="w-full text-center md:text-left font-helvetica text-white font-[500] text-[16px]">Join the Community and stay up to date</p>
-          <div className="w-full h-[41px] md:w-[343px] md:h-[45px] flex mt-3 mb-5 mx-auto md:mx-0">
+          <div className="w-[80%] h-[41px] md:w-[343px] md:h-[45px] flex mt-3 mb-5 mx-auto md:mx-0">
             <input
               type="email"
               placeholder="Your Email Address"

@@ -16,7 +16,7 @@ const Accordians = () => {
 
       <div className="px-4 mt-10 w-full flex flex-col md:flex-row items-start justify-between">
         <div className="px-2 w-full md:w-[33%] md:border-r">
-          <p className="mb-12 md:w-full text-[24px] md:text-[30px] [@media(min-width:1900px)]:text-[38px] text-black font-garamond font-[400] text-center italic">
+          <p className="mb-2 md:mb-12 md:w-full text-[24px] md:text-[30px] [@media(min-width:1900px)]:text-[38px] text-black font-garamond font-[400] text-center italic">
             Client Care
           </p>
 
@@ -152,7 +152,7 @@ const Accordians = () => {
 
         {/* ------------------- Diamonds column ------------------- */}
         <div className="w-full md:w-[33%] md:border-r px-2">
-          <p className="mb-12 md:w-full text-[24px] [@media(min-width:1900px)]:text-[38px] md:text-[30px] text-black font-garamond font-[400] text-center italic">
+          <p className="mb-2 md:mb-12 md:w-full text-[24px] [@media(min-width:1900px)]:text-[38px] md:text-[30px] text-black font-garamond font-[400] text-center italic">
             Diamonds
           </p>
 
@@ -235,7 +235,7 @@ const Accordians = () => {
 
         {/* ------------------- General column ------------------- */}
         <div className="w-full md:w-[33%] px-2">
-          <p className="mb-12 md:w-full text-[24px] [@media(min-width:1900px)]:text-[38px] md:text-[30px] text-black font-garamond font-[400] text-center italic">
+          <p className="mb-2 md:mb-12 md:w-full text-[24px] [@media(min-width:1900px)]:text-[38px] md:text-[30px] text-black font-garamond font-[400] text-center italic">
             General
           </p>
 
@@ -293,7 +293,7 @@ const Accordians = () => {
             <AccordionItem value="item-6" className="border-b border-[#A39186] accordion-item">
               <AccordionTrigger className="acc-trigger text-black text-[10px] md:text-[16px] font-medium font-helvetica">
                 <img src="/images/accArr.svg" alt="" aria-hidden className="acc-trigger-icon w-[24px] h-[14px] " width={24} height={14} />
-                <span className= "font-helvetica md:text-[12px] [@media(min-width:1900px)]:text-168px text-[10px]]w-full text-[10px] md:text-[12px]">Does Flawless offer jewellery insurance?</span>
+                <span className= "font-helvetica md:text-[12px] [@media(min-width:1900px)]:text-168px text-[10px]] w-full text-[10px] md:text-[12px]">Does Flawless offer jewellery insurance?</span>
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 text-balance">
                 <p className="text-black md:text-[12px] text-[10px]">Lorem ipsum dolor sit amet...</p>
