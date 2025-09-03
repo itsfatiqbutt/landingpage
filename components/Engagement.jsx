@@ -37,6 +37,12 @@ const Engagement = () => {
   const [visibleCount, setVisibleCount] = useState(2);
   const [layoutReady, setLayoutReady] = useState(false);
 
+  // NEW: drag state (for cursor + UX)
+  const [dragging, setDragging] = useState(false); // NEW
+  const isDraggingRef = useRef(false); // NEW
+  const startXRef = useRef(0); // NEW
+  const startScrollLeftRef = useRef(0); // NEW
+
   // compute scroll step (one item + gap)
   const getScrollStep = useCallback(() => {
     if (!itemWidth) return 0;
@@ -156,36 +162,49 @@ const Engagement = () => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    let isPointerDown = false;
-    let pointerUpTimeout = null;
 
-    const onPointerDown = () => {
-      isPointerDown = true;
-      if (pointerUpTimeout) {
-        clearTimeout(pointerUpTimeout);
-        pointerUpTimeout = null;
-      }
+    const onDragStart = (e) => e.preventDefault(); // ✅ fixed
+    el.addEventListener("dragstart", onDragStart);
+
+    const onPointerDown = (e) => {
+      isDraggingRef.current = true;
+      setDragging(true);
+      startXRef.current = e.clientX;
+      startScrollLeftRef.current = el.scrollLeft;
+      try {
+        e.target.setPointerCapture(e.pointerId);
+      } catch {}
     };
 
-    const onPointerUpOrCancel = () => {
-      isPointerDown = false;
-      // snap a bit after interaction ends
-      pointerUpTimeout = setTimeout(() => {
-        snapToNearest();
-      }, 120);
+    const onPointerMove = (e) => {
+      if (!isDraggingRef.current) return;
+      e.preventDefault();
+      const dx = e.clientX - startXRef.current;
+      const speed = 4; // NEW multiplier to make drag feel faster
+      el.scrollLeft = startScrollLeftRef.current - dx * speed;
+      updateButtons();
+    };
+
+    const endDrag = () => {
+      if (!isDraggingRef.current) return;
+      isDraggingRef.current = false;
+      setDragging(false);
+      snapToNearest();
     };
 
     el.addEventListener("pointerdown", onPointerDown);
-    window.addEventListener("pointerup", onPointerUpOrCancel);
-    window.addEventListener("pointercancel", onPointerUpOrCancel);
+    window.addEventListener("pointermove", onPointerMove, { passive: false });
+    window.addEventListener("pointerup", endDrag);
+    window.addEventListener("pointercancel", endDrag);
 
     return () => {
+      el.removeEventListener("dragstart", onDragStart);
       el.removeEventListener("pointerdown", onPointerDown);
-      window.removeEventListener("pointerup", onPointerUpOrCancel);
-      window.removeEventListener("pointercancel", onPointerUpOrCancel);
-      if (pointerUpTimeout) clearTimeout(pointerUpTimeout);
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", endDrag);
+      window.removeEventListener("pointercancel", endDrag);
     };
-  }, [snapToNearest]);
+  }, [snapToNearest, updateButtons]);
 
   // item style generator
   const itemStyle = itemWidth
@@ -221,8 +240,13 @@ const Engagement = () => {
               visibility: layoutReady ? "visible" : "hidden",
               scrollSnapType: "x mandatory",
               WebkitOverflowScrolling: "touch",
+              userSelect: dragging ? "none" : undefined,
             }}
-            className="carousel-inner no-scrollbar flex gap-4 md:gap-4 overflow-x-auto scroll-smooth"
+            className={
+              // UPDATED: add grab/grabbing cursor for better UX feedback
+              `carousel-inner no-scrollbar flex gap-4 md:gap-4 overflow-x-auto scroll-smooth ` +
+              (dragging ? "cursor-grabbing" : "cursor-grab") // UPDATED
+            }
             aria-label="Engagement ring styles carousel"
           >
             {engagementsData.map((item, idx) => (
