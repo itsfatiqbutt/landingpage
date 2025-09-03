@@ -88,20 +88,20 @@ const Browse = () => {
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            className="absolute left-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+            className="absolute left-[-10px] top-1/2 -translate-y-1/2 w-[17px] h-[9px] md:w-[31px] md:h-[17px] z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={leftIconSrc} alt="Previous" width={15} height={10} />
+            <img src={leftIconSrc} alt="Previous" width={37} height={22} className="w-[17px] h-[9px] md:w-[37px] md:h-[22px]" />
           </button>
 
           {/* Custom Next Button (no bg, no hover, just pointer) */}
           <button
             onClick={scrollNext}
             aria-label="Next"
-            className="absolute right-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+            className="absolute right-[-10px] top-1/2 w-[17px] h-[9px] md:w-[31px] md:h-[17px] -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={rightIconSrc} alt="Next" width={15} height={10} />
+            <img src={rightIconSrc} alt="Next" width={37} height={22} className="w-[17px] h-[9px] md:w-[37px] md:h-[22px]" />
           </button>
         </div>
       </div>

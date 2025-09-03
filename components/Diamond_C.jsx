@@ -10,9 +10,9 @@ const Diamond_C = ({ img, link }) => {
         <Image
           src={img}
           alt={link || 'diamond'}
-          width={155}
-          height={155}
-          className="object-contain w-[55px] h-[55px] md:w-[155px] md:h-[155px]"
+          width={135}
+          height={135}
+          className="object-contain w-[55px] h-[55px] md:w-[135px] md:h-[135px]"
           priority={false}
         />
       </div>

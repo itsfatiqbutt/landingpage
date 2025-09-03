@@ -58,17 +58,17 @@ const WhatsNew = () => {
 
             <Image
               src="/images/cr-left.svg"
-              width={15}
-              height={10}
+              width={31}
+              height={17}
               alt="Previous"
-              className="absolute z-10 left-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              className="absolute z-10 left-4 top-1/2 -translate-y-1/2 pointer-events-none w-[17px] h-[9px] md:w-[48px] md:h-[21px]"
             />
             <Image
               src="/images/cr-right.svg"
-              width={15}
-              height={10}
+              width={48}
+              height={21}
               alt="Next"
-              className="absolute z-10 right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              className="absolute z-10 right-4 top-1/2 -translate-y-1/2 pointer-events-none w-[17px] h-[9px] md:w-[48px] md:h-[21px]"
             />
           </Carousel>
         </div>

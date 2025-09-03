@@ -30,7 +30,7 @@ const Unique = () => {
         Our Hatton Garden jewellers have endeavoured to partner only with responsible and sustainable gemstone suppliers to help us source truly remarkable pieces worthy of your love story.
         </p>
         <button className='font-hiragino rounded-[6px] cursor-pointer hover:bg-[#806C63] transition duration-500 font-medium bg-[#EDE7E5] w-[80%] md:w-[60%] mx-auto md:ml-0 text-[12px] md:text-[16px] h-[43px] flex items-center justify-center md:h-[65px] '>
-        SHOP COLOURED DIAMOND RINGS
+        SHOP GEMSTONE ENGAGEMENT RINGS
         </button>
 
    </div>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const Begin = () => {
-  return <div className='w-[95%] mx-auto flex flex-col md:flex-row items-center justify-between mt-[208px]'>
+  return <div className='w-[95%] mx-auto flex flex-col md:flex-row items-center justify-between mt-[30px] md:mt-[208px]'>
     <div className='w-full md:w-[50%] h-auto'>
       <Image src="/images/where1.png" width={865} height={665} alt=
       "img" className="md:w-[787px] md:h-[611px]"></Image>

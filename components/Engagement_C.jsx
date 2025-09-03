@@ -21,7 +21,7 @@ const Engagement_C = ({ img, link }) => {
         />
       </div>
 
-      <Link href="#" className="font-[600] font-hiragino w-full text-[10px] md:text-[20px] text-black text-center">
+      <Link href="#" className="font-[600] font-hiragino w-full md:mt-[-30px] text-[10px] md:text-[20px] text-black text-center">
         {link}
       </Link>
     </div>

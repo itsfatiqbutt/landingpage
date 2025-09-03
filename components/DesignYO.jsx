@@ -53,7 +53,7 @@ const DesignYO = () => {
         </ul>
 
         {/* Centered CTA */}
-        <button className="mt-10 w-[253px] h-[30px] leading-[30px] md:h-[68px] md:leading-[68px] font-hiragino w-[80%] md:w-[60%] 2xl:w-[483px] rounded-[6px] bg-[#EDE7E5] text-[8px] md:text-[12px] text-black text-center">
+        <button className="mt-10 w-[253px] h-[30px] leading-[30px] md:h-[68px] md:leading-[68px] font-hiragino w-[80%] md:w-[60%] 2xl:w-[483px] rounded-[6px] bg-[#EDE7E5] text-[8px] md:text-[14px] text-black text-center">
   BOOK A COMPLIMENTARY CONSULTATION
 </button>
 

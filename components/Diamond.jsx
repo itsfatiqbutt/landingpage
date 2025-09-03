@@ -36,8 +36,8 @@ const Diamond = () => {
           {/* Custom Next Arrow */}
           <CarouselNext className="absolute !z-20 !opacity-0  right-[6px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
           </CarouselNext>
-          <Image src="/images/cr-left.svg" width={30} height={17} alt="img" className="absolute z-10 left-[10px] top-1/2 -translate-y-1/2"></Image>
-          <Image src="/images/cr-right.svg" width={30} height={17} alt="img" className="absolute z-10 right-[10px] top-1/2 -translate-y-1/2"></Image>
+          <Image src="/images/cr-left.svg" width={30} height={38} alt="img" className="absolute z-10 left-[10px] top-1/2 -translate-y-1/2 w-[17px] h-[9px] md:w-[43px] md:h-[21px]"></Image>
+          <Image src="/images/cr-right.svg" width={30} height={17} alt="img" className="absolute z-10 right-[10px] top-1/2 -translate-y-1/2 w-[17px] h-[9px] md:w-[43px] md:h-[21px]"></Image>
         </Carousel>
       </div>
     </div>

@@ -83,7 +83,7 @@ const Header = () => {
         </h1>
 
         <div className="xl:flex items-center justify-center gap-4 2xl:gap-20 xl:ml-[20px] hidden ">
-          <Link href="#" className="font-hiragino text-[12px] text-black font-[600]">
+          <Link href="#" className="font-hiragino text-[12px]  text-black font-[600]">
             ENGAGEMENT
           </Link>
           <Link href="#" className="font-hiragino  text-[12px] text-black font-[600]">
