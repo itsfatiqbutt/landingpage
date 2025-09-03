@@ -250,7 +250,7 @@ const Engagement = () => {
             alt="Previous"
             width={37}
             height={22}
-            className="w-[18px] h-[20px] md:w-[42px] md:h-[21px]"
+            className="w-[18px] h-[20px] md:w-[42px] md:h-[35px]"
           />
         </button>
 
@@ -266,7 +266,7 @@ const Engagement = () => {
             alt="Next"
             width={37}
             height={22}
-            className="w-[18px] h-[20px] md:w-[42px] md:h-[21px]"
+            className="w-[18px] h-[20px] md:w-[42px] md:h-[35px]"
           />
         </button>
       </div>

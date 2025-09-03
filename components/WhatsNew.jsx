@@ -38,7 +38,7 @@ const WhatsNew = () => {
         </div>
 
         {/* Carousel Column */}
-        <div className="order-2 md:order-2 w-full md:w-[73%] flex-1 h-full relative flex items-center justify-center">
+        <div className="order-2 md:order-2 w-full md:w-[90%] flex-1 h-full relative flex items-center justify-center">
           <Carousel className="w-full h-full px-4 md:px-12 overflow-hidden">
             <CarouselContent>
               {whatsnew.map((item, idx) => (
@@ -61,14 +61,14 @@ const WhatsNew = () => {
               width={31}
               height={17}
               alt="Previous"
-              className="absolute z-10 left-0 md:left-4 top-1/2 translate-y-[-35px] md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[48px] md:h-[21px]"
+              className="absolute z-10 left-[-10px]  top-1/2 translate-y-[-35px] md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[48px] md:h-[35px]"
             />
             <Image
               src="/images/cr-right.svg"
               width={48}
               height={21}
               alt="Next"
-              className="absolute z-10 right-0 md:right-4 top-1/2 translate-y-[-35px]  md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[48px] md:h-[21px]"
+              className="absolute z-10 right-[-10px]  top-1/2 translate-y-[-35px]  md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[48px] md:h-[35px]"
             />
           </Carousel>
         </div>

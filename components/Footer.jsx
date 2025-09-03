@@ -44,7 +44,7 @@ const Footer = () => {
         {/* Each column: two-per-row on small screens (w-1/2). On md+ they become flexible columns that can shrink.
             min-w-[220px] ensures readability but still allows fitting on wide screens.
         */}
-        <div className="w-1/2 sm:w-1/2 md:w-auto md:flex-1 w-[170px] md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
+        <div className="w-1/2 sm:w-1/2 md:w-auto md:flex-1 w-[130px] md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
           <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px]">CUSTOMER SERVICE</h2>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Terms and Conditions</Link>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Delivery and Returns</Link>
@@ -55,8 +55,8 @@ const Footer = () => {
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Diamond Education</Link>
         </div>
 
-        <div className="w-1/2 sm:w-1/2 md:w-auto w-[170px] ml-[40px] sm:ml-0 md:flex-1 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
-          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px] translate-x-[15px] md:translate-x-0">ABOUT US</h2>
+        <div className="w-1/2 sm:w-1/2 md:w-auto w-[130px] ml-[40px] sm:ml-0 md:flex-1 md:flex-shrink-0 translate-x-[15px] md:translate-x-0 md:min-w-[220px] flex flex-col items-start gap-2">
+          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px] ">ABOUT US</h2>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Our Story</Link>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Our Showroom</Link>
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">The Journal</Link>
@@ -65,7 +65,7 @@ const Footer = () => {
           <Link href="#" className="font-helvetica text-white text-[14px] font-[500] hover:underline">Flawless Manchester</Link>
         </div>
 
-        <div className="w-1/2 sm:w-1/2 md:w-auto w-[170px] md:flex-1 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
+        <div className="w-1/2 sm:w-1/2 md:w-auto w-[130px] md:flex-1 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
           <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px]">CONTACT US</h2>
           <p className="font-helvetica text-white text-[14px] font-[500]">+44 7518021455</p>
           <p className="font-helvetica text-white text-[14px] sm:text-[14px] font-[500]">sales@flawlessfinejewelry.com</p>
@@ -74,8 +74,8 @@ const Footer = () => {
           <p className="font-helvetica text-white text-[14px] font-[500]">107 Hatton Garden, London EC1N8LY</p>
         </div>
 
-        <div className="w-1/2 sm:w-1/2 md:w-auto  w-[130px] md:flex-1 ml-[60px] sm:ml-0 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
-          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px] translate-x-[15px] md:translate-x-0">FOLLOW US</h2>
+        <div className="w-1/2 sm:w-1/2 md:w-auto  w-[130px] md:flex-1 ml-[60px] sm:ml-0 translate-x-[15px] md:translate-x-0 md:flex-shrink-0 md:min-w-[220px] flex flex-col items-start gap-2">
+          <h2 className="font-hiragino font-[600] text-white text-[14px] md:text-[16px] ">FOLLOW US</h2>
           <div className="flex gap-4 mt-2">
             <div className="flex flex-col gap-3">
               <Image src="/images/fi1.png" width={50} height={50} alt="img" className="w-[42px] h-[42px] md:w-[50px] md:h-[50px]" />
@@ -108,7 +108,7 @@ const Footer = () => {
       <div className="w-full flex flex-col items-center gap-3 mt-6">
         <div className="flex gap-3 items-center justify-center">
           <Image src="/images/f31.png" width={209} height={118} alt="img" className="w-[122px] h-[68px] md:w-[209px] md:h-[118px]" />
-          <Image src="/images/f32.png" width={150} height={61} alt="img" className="w-[103px] h-[42px] md:w-[215px] md:h-[61px]" />
+          <Image src="/images/f32.png" width={150} height={61} alt="img" className="w-[103px] h-[42px] md:w-[150px] md:h-[61px]" />
           <Image src="/images/f33.png" width={175} height={64} alt="img" className="w-[115px] h-[42px] md:w-[175px] md:h-[64px]" />
         </div>
 
