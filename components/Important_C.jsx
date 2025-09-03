@@ -33,7 +33,7 @@ const Important_C = ({ heading, img, h2, para, tag, noWidth = false }) => {
         </div>
       </div>
 
-      <p className="font-helvetica font-medium text-[12px] md:text-[18px] text-black">
+      <p className="font-helvetica font-[400] text-[12px] md:text-[18px] text-black">
         {para}
       </p>
     </div>

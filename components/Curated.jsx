@@ -38,15 +38,15 @@ const Curated = () => {
             {/* decorative arrows (no layout effect) */}
             <Image
               src="/images/cr-left.svg"
-              width={15}
-              height={10}
+              width={30}
+              height={17}
               alt="Previous"
               className="absolute z-10 left-4 top-1/2 -translate-y-1/2 pointer-events-none"
             />
             <Image
               src="/images/cr-right.svg"
-              width={15}
-              height={10}
+              width={30}
+              height={17}
               alt="Next"
               className="absolute z-10 right-4 top-1/2 -translate-y-1/2 pointer-events-none"
             />

@@ -2,47 +2,47 @@ export const diamondsData =
 [
 
 {
-  img:"/images/d1.png",
+  img:"/images/round.png",
   link: "Round"
 },
 {
-  img:"/images/d2.png",
+  img:"/images/oval.png",
   link: "Oval"
 },
 {
-  img:"/images/d3.png",
+  img:"/images/emerald.png",
   link: "Emerald"
 },
 {
-  img:"/images/d4.png",
+  img:"/images/asscher.png",
   link: "Asscher"
 },
 {
-  img:"/images/d5.png",
+  img:"/images/radiant.png",
   link: "Radiant"
 },
 {
-  img:"/images/d6_6.png",
+  img:"/images/elogant cushion.png",
   link: "Elongated Cushion"
 },
 {
-  img:"/images/d6.png",
+  img:"/images/pear.png",
   link: "Pear"
 },
 {
-  img:"/images/d7.png",
+  img:"/images/princess.png",
   link: "Princess"
 },
 {
-  img:"/images/d8.png",
+  img:"/images/marquise.png",
   link: "Marquise"
 },
 {
-  img:"/images/d9.png",
+  img:"/images/heart 2.png",
   link: "Heart"
 },
 {
-  img:"/images/d10.png",
+  img:"/images/cushion.png",
   link: "Cushion"
 },
 

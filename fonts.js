@@ -30,8 +30,23 @@ import localFont from "next/font/local"
 export const helveticaNow = localFont({
   src: [
     {
-      path: "./fonts/helveticanowtext-black-demo.ttf",
-      weight: "900",
+      path: "./fonts/HelveticaNowText-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/HelveticaNowText-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/HelveticaNowText-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/HelveticaNowText-Medium.ttf",
+      weight: "500",
       style: "normal",
     },
     {
@@ -44,7 +59,16 @@ export const helveticaNow = localFont({
       weight: "700",
       style: "italic",
     },
-
+    {
+      path: "./fonts/helveticanowtext-black-demo.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/helveticanowtext-blackitalic-demo.ttf",
+      weight: "900",
+      style: "italic",
+    },
   ],
   variable: "--font-helvetica-now", // for Tailwind integration
-})
+});

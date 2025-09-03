@@ -80,7 +80,7 @@ const Importants = () => {
             className="xl:hidden absolute left-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={leftIconSrc} alt="Previous" width={15} height={10} />
+            <img src={leftIconSrc} alt="Previous" width={31} height={17} />
           </button>
 
           {/* Custom Next Button (no bg, no hover, just pointer) */}
@@ -90,7 +90,7 @@ const Importants = () => {
             className="xl:hidden absolute right-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={rightIconSrc} alt="Next" width={15} height={10} />
+            <img src={rightIconSrc} alt="Next" width={31} height={17} />
           </button>
         </div>
       </div>

@@ -3,16 +3,16 @@ import Image from 'next/image';
 
 const Curated_C = ({ img, name, price }) => {
   return (
-    <div className="h-full w-[169px] md:w-full flex flex-col">
+    <div className="h-[451px] w-[169px] md:w-full flex flex-col items-center">
       {/* fixed image area to reserve space and avoid layout shifts */}
-      <div className="relative w-full h-[320px] md:h-[420px] flex-shrink-0">
-        <Image
-          src={img}
-          alt={name}
-          fill
-          className="object-cover"
-          priority={false} // set true for first few important slides if desired
-        />
+      <div className="relative w-full h-[320px] md:h-[420px] aspect-[320/451] flex-shrink-0">
+      <Image
+        src={img}
+        alt={name}
+        width={320}
+        height={451}
+        className="w-full h-auto object-contain"
+      />
       </div>
 
       {/* name area: constrained height so long titles don't change item height */}

@@ -44,9 +44,9 @@ with the finest diamonds and heritage techniques.
           {/* Custom Next Arrow */}
           <CarouselNext className="absolute !z-20  right-0 !opacity-0  md:right-[-50px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
           </CarouselNext>
-          <Image src="/images/cr-left.svg" width={15} height={24} alt="img" className="absolute z-10 left-0 md:left-[-50px]
+          <Image src="/images/cr-left.svg" width={30} height={17} alt="img" className="absolute z-10 left-0 md:left-[-50px]
            top-1/2 -translate-y-1/2"></Image>
-          <Image src="/images/cr-right.svg" width={15} height={24} alt="img" className="absolute z-10 right-0 md:right-[-50px] top-1/2 -translate-y-1/2"></Image>
+          <Image src="/images/cr-right.svg" width={30} height={17} alt="img" className="absolute z-10 right-0 md:right-[-50px] top-1/2 -translate-y-1/2"></Image>
         </Carousel>
     </div>
   </div>

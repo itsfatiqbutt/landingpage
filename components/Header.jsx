@@ -7,9 +7,20 @@ const Header = () => {
   const [query, setQuery] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [countryOpen, setCountryOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('GBR');
 
   const searchRef = useRef(null);
   const mobileRef = useRef(null);
+  const countryRef = useRef(null);
+
+  const countries = [
+    { code: 'GBR', name: 'United Kingdom' },
+    { code: 'USA', name: 'United States' },
+    { code: 'PAK', name: 'Pakistan' },
+    { code: 'IND', name: 'India' },
+    { code: 'AUS', name: 'Australia' },
+  ];
 
   // Focus the search input when opened
   useEffect(() => {
@@ -18,17 +29,17 @@ const Header = () => {
     }
   }, [searchOpen]);
 
-  // Close search on click outside or Escape
+  // Close search / mobile / country on click outside or Escape
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Escape') {
         setSearchOpen(false);
         setMobileOpen(false);
+        setCountryOpen(false);
       }
     };
     const handleClickOutside = (e) => {
       if (searchOpen && searchRef.current && !searchRef.current.contains(e.target)) {
-        // if the click is not inside the search input or its container, close
         const container = document.getElementById('header-search-container');
         if (container && !container.contains(e.target)) {
           setSearchOpen(false);
@@ -37,6 +48,9 @@ const Header = () => {
       if (mobileOpen && mobileRef.current && !mobileRef.current.contains(e.target)) {
         setMobileOpen(false);
       }
+      if (countryOpen && countryRef.current && !countryRef.current.contains(e.target)) {
+        setCountryOpen(false);
+      }
     };
     document.addEventListener('keydown', handleKey);
     document.addEventListener('mousedown', handleClickOutside);
@@ -44,7 +58,7 @@ const Header = () => {
       document.removeEventListener('keydown', handleKey);
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [searchOpen, mobileOpen]);
+  }, [searchOpen, mobileOpen, countryOpen]);
 
   const submitSearch = (e) => {
     e.preventDefault();
@@ -168,14 +182,47 @@ const Header = () => {
             <p className="font-hiragino text-[9px] md:text-[12px] text-black md:block hidden ">Cart</p>
           </div>
 
-          <div className="flex items-center justify-center gap-1 mr-4 md:mr-0">
-            <div className="md:w-[25px] md:h-[22px] w-[8px] h-[8px] relative">
-              <Image src="/images/country.png" fill className="absolute" alt="country" />
-            </div>
-            <p className="font-hiragino text-[8px] md:text-[10px] md:text-[12px] text-black ">GBP</p>
-            <div className="w-[10px] h-[5px] relative">
-              <Image src="/images/arrowDown.svg" fill className="absolute" alt="arrow" />
-            </div>
+          {/* COUNTRY DROPDOWN (desktop) */}
+          <div className="flex items-center justify-center gap-1 mr-4 md:mr-0 relative" ref={countryRef} id="header-country-container">
+            <button
+              aria-haspopup="listbox"
+              aria-expanded={countryOpen}
+              aria-label={`Select country, current: ${selectedCountry}`}
+              onClick={() => setCountryOpen((s) => !s)}
+              className="flex items-center gap-2"
+            >
+              <div className="md:w-[25px] md:h-[22px] w-[8px] h-[8px] relative">
+                <Image src="/images/country.png" fill className="absolute" alt="country" />
+              </div>
+              <p className="font-hiragino text-[8px] md:text-[10px] md:text-[12px] text-black ">{selectedCountry}</p>
+              <div className="w-[10px] h-[5px] relative">
+                <Image src="/images/arrowDown.svg" fill className="absolute" alt="arrow" />
+              </div>
+            </button>
+
+            {countryOpen && (
+              <ul
+                role="listbox"
+                aria-label="Country options"
+                className="absolute right-0 top-4 w-[140px] bg-white border rounded shadow z-50 py-1"
+              >
+                {countries.map((c) => (
+                  <li
+                    key={c.code}
+                    role="option"
+                    aria-selected={selectedCountry === c.code}
+                    onClick={() => {
+                      setSelectedCountry(c.code);
+                      setCountryOpen(false);
+                    }}
+                    className="px-3 py-2 text-sm cursor-pointer hover:bg-gray-100"
+                    title={c.name}
+                  >
+                    {c.code}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
 
@@ -269,11 +316,49 @@ const Header = () => {
                   </div>
                 </div>
 
-                <div className="mt-4 flex items-center gap-2">
+                <div className="mt-4 flex items-center gap-2 relative" ref={countryRef}>
                   <div className="w-[26px] h-[22px] relative">
                     <Image src="/images/country.png" fill className="absolute" alt="country" />
                   </div>
-                  <span className="font-[600]">GBP</span>
+
+                  <div className="inline-block">
+                    <button
+                      aria-haspopup="listbox"
+                      aria-expanded={countryOpen}
+                      aria-label={`Select country, current: ${selectedCountry}`}
+                      onClick={() => setCountryOpen((s) => !s)}
+                      className="font-[600] flex items-center gap-2"
+                    >
+                      <span>{selectedCountry}</span>
+                      <div className="w-[10px] h-[5px] relative">
+                        <Image src="/images/arrowDown.svg" fill className="absolute" alt="arrow" />
+                      </div>
+                    </button>
+
+                    {countryOpen && (
+                      <ul
+                        role="listbox"
+                        aria-label="Country options"
+                        className="mt-2 w-[120px] bg-white border rounded shadow z-50 py-1 absolute"
+                      >
+                        {countries.map((c) => (
+                          <li
+                            key={c.code}
+                            role="option"
+                            aria-selected={selectedCountry === c.code}
+                            onClick={() => {
+                              setSelectedCountry(c.code);
+                              setCountryOpen(false);
+                            }}
+                            className="px-3 py-2 text-sm cursor-pointer hover:bg-gray-100"
+                            title={c.name}
+                          >
+                            {c.code}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

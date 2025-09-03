@@ -136,7 +136,7 @@ const Engagement = () => {
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollPrev}
         >
-          <img src={leftIconSrc} alt="Previous" width={15} height={10} />
+          <img src={leftIconSrc} alt="Previous" width={31} height={17} />
         </button>
 
         {/* Next button */}
@@ -147,7 +147,7 @@ const Engagement = () => {
           style={{ WebkitTapHighlightColor: 'transparent' }}
           disabled={!canScrollNext}
         >
-          <img src={rightIconSrc} alt="Next" width={15} height={10} />
+          <img src={rightIconSrc} alt="Next" width={31} height={17} />
         </button>
       </div>
     </div>
