@@ -8,7 +8,7 @@ const Footer = () => {
       {/* top row: title + small white cards */}
       <div className="w-full px-5 md:px-0 mx-auto flex flex-wrap gap-6 justify-center  items-center">
         <div className="flex flex-col gap-1 flex-shrink-0">
-          <p className="font-[600] text-white text-[12px] text-center md:text-left">BEFORE YOUR APPOINTMENT</p>
+          <p className="font-hiragino font-[600] text-white text-[12px] text-center md:text-left">BEFORE YOUR APPOINTMENT</p>
           <h1 className="font-garamond font-[500] text-white text-[32px] italic">Useful Tools & Information</h1>
         </div>
 
@@ -97,9 +97,9 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Your Email Address"
-              className="flex-1 min-w-0 h-full placeholder:font-inter placeholder:text-[11px] placeholder:text-black placeholder:font-[500] bg-white/80 px-4"
+              className="flex-1 min-w-0 h-full placeholder:font-inter placeholder:text-[16px] placeholder:text-black placeholder:font-[500] bg-white/80 px-4"
             />
-            <button className="flex-none h-full px-6 bg-white/50 flex items-center justify-center font-inter text-[14px] text-black font-[500]">SUBMIT</button>
+            <button className="flex-none h-full px-6 bg-white/50 flex items-center justify-center font-inter text-[16px] text-black font-[500]">SUBMIT</button>
           </div>
         </div>
       </div>

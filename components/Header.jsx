@@ -71,13 +71,13 @@ const Header = () => {
   return (
     <>
       <div
-        className="w-full h-[16px] md:h-[33px] 2xl:h-[46px] 
+        className="w-full h-[16px] md:h-[33px] 2xl:h-[46px]
                   bg-[#806C63] flex items-center justify-center text-[12px] md:text-[16px] text-white  "
       >
         Hatton Garden Jewellers
       </div>
 
-      <div className="w-full flex items-center md:pl-9 pt-2 pb-4 md:pt-5 md:pr-3 px-1 w-full bg-white h-auto relative">
+      <div className="w-full flex items-center md:pl-9 pt-2 pb-4 md:pt-5 md:pr-3 px-1 w-full bg-white h-auto relative md:h-[73px]">
         <h1 className="font-hiragino text-[13px] md:text-[22px]  font-[600] text-black tracking-[7px]">
           FLAWLESS
         </h1>

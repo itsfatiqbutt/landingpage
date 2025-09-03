@@ -39,27 +39,27 @@ const Curated = () => {
               width={47}
               height={21}
               alt="Previous"
-              className="absolute z-10 left-4 top-1/2 -translate-y-1/2 pointer-events-none w-[17px] h-[9px] md:w-[47px] md:h-[21px]"
+              className="absolute z-10 left-1  md:left-4 top-1/2 translate-y-[-40px] md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[47px] md:h-[21px]"
             />
             <Image
               src="/images/cr-right.svg"
               width={47}
               height={21}
               alt="Next"
-              className="absolute z-10 right-4 top-1/2 -translate-y-1/2 pointer-events-none w-[17px] h-[9px] md:w-[47px] md:h-[21px]"
+              className="absolute z-10 right-1 md:right-4 top-1/2 translate-y-[-40px] md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[47px] md:h-[21px]"
             />
           </Carousel>
         </div>
 
         {/* Text Column */}
         <div className="order-1 md:order-2 w-full md:w-[21%] flex flex-col justify-center gap-5 pr-4">
-          <p className="font-hiragino mx-auto w-[80%] md:w-full md:text-[18px] text-[12px] text-black font-[600] text-center md:text-left">
+          <p className="font-hiragino mx-auto w-[80%] md:w-full md:text-[14px] [@media(min-width:1900px)]:text-[18px] text-[12px] text-black font-[600] text-center md:text-left">
             CURATED COLLECTION
           </p>
-          <p className="mx-auto w-[80%] md:w-full text-[24px] md:text-[32px] text-black font-garamond font-[400] text-center md:text-left italic">
+          <p className="mx-auto w-[80%] md:w-full text-[24px] md:text-[32px] [@media(min-width:1900px)]:text-[40px] text-black font-garamond font-[400] text-center md:text-left">
             Engagement Rings
           </p>
-          <p className="mx-auto w-[80%] md:w-full font-helvetica font-[500] text-[14px] md:text-[15px] text-black text-center md:text-left">
+          <p className="mx-auto w-[80%] md:w-full font-helvetica font-[500] text-[14px] md:text-[15px] [@media(min-width:1900px)]:text-[18px] text-black text-center md:text-left">
             Let us choose you the perfect diamond. All you have to do is select from Ring Designs that have been chosen over and over again as perfect heirlooms. These engagement rings are crafted by hand using sustainable methods and heritage techniques in Hatton Garden. They are made to order and take 6-8 weeks to complete.
           </p>
           <button className="mx-auto w-[70%] hidden md:w-full rounded-[6px] mt-4 h-[57px] border md:flex items-center justify-center md:text-[13px] text-[11px] text-black">
@@ -70,7 +70,7 @@ const Curated = () => {
 
       {/* Mobile Button */}
       <div className="flex justify-center mt-4 md:hidden">
-        <button className="w-[70%] h-[57px] border flex items-center justify-center text-[11px] text-black">
+        <button className="w-[70%] h-[40px] border border-black rounded-[1px] flex items-center justify-center text-[13px] text-black">
           SHOP DIAMOND ENGAGEMENT RINGS
         </button>
       </div>

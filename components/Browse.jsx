@@ -55,17 +55,17 @@ const Browse = () => {
 
 
   return (
-    <div className="w-[95%] mx-auto mt-[98px] mb-20">
-      <h1 className="w-auto text-center mx-auto font-garamond font-[400] text-[#403526] md:text-[32px] text-[18px]">
-      Browse our Expert Diamond & Jewellery Guides
+    <div className="w-[95%] mx-auto mt-[30px] md:mt-[98px] mb-20">
+      <h1 className="w-auto px-8 md:px-0 text-center mx-auto font-garamond font-[400] text-[#403526] md:text-[32px] [@media(min-width:1900px)]:text-[36px] text-[18px]">
+      Browse our Expert Diamond &<br className=" md:hidden"></br> Jewellery Guides
       </h1>
-      <p className="mt-[20px] md:mt-[50px] font-helvetica font-medium text-[10px] w-[90%] text-center md:w-[60%] mx-auto md:text-[16px] text-black font-[500] ">
+      <p className="mt-[20px] md:mt-[50px] font-helvetica font-medium text-[10px] w-[90%] text-center md:w-[60%] mx-auto md:text-[16px] [@media(min-width:1900px)]:text-[20px] text-black font-[500] ">
       Take a quick look at our featured diamond & jewellery resources or go to our Complete Guides Page written and curated by our expert jewellers in Hatton Garden.
       </p>
 
       <div className="flex flex-col md:flex-row items-start md:items-stretch justify-between mt-[15px] md:mt-[70px] gap-8">
         <div className="relative w-full" ref={carouselRef}>
-          <Carousel className="w-full px-3">
+          <Carousel className="w-full px-10 md:px-3">
             <CarouselContent>
               {browseData.map((card, idx) => (
                 <CarouselItem
@@ -88,20 +88,20 @@ const Browse = () => {
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            className="absolute left-[-10px] top-1/2 -translate-y-1/2 w-[17px] h-[9px] md:w-[31px] md:h-[17px] z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+            className="absolute left-0 md:left-[-10px] top-1/2 translate-y-[-10px] md:-translate-y-1/2 w-[17px] h-[20px] md:w-[31px] md:h-[17px] z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={leftIconSrc} alt="Previous" width={37} height={22} className="w-[17px] h-[9px] md:w-[37px] md:h-[22px]" />
+            <img src={leftIconSrc} alt="Previous" width={37} height={22} className="w-[17px] h-[20px] md:w-[37px] md:h-[22px]" />
           </button>
 
           {/* Custom Next Button (no bg, no hover, just pointer) */}
           <button
             onClick={scrollNext}
             aria-label="Next"
-            className="absolute right-[-10px] top-1/2 w-[17px] h-[9px] md:w-[31px] md:h-[17px] -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
+            className="absolute right-0 md:right-[-10px] top-1/2 w-[17px] h-[20px] md:w-[31px] md:h-[17px] translate-y-[-10px] md:-translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={rightIconSrc} alt="Next" width={37} height={22} className="w-[17px] h-[9px] md:w-[37px] md:h-[22px]" />
+            <img src={rightIconSrc} alt="Next" width={37} height={22} className="w-[17px] h-[20px] md:w-[37px] md:h-[22px]" />
           </button>
         </div>
       </div>

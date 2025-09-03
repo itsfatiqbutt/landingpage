@@ -16,12 +16,12 @@ export default function WhatIs() {
   const toggle = (index) => setOpenIndex(prev => (prev === index ? -1 : index));
 
   return (
-    <div className="pt-0 pb-10 w-full flex md:py-20 flex-col md:flex-row items-center justify-around bg-[#EDE7E5] mt-[169px]">
+    <div className="pt-0 pb-10 w-full flex md:py-20 flex-col md:flex-row items-center justify-around bg-[#EDE7E5] mt-[60px] md:mt-[169px]">
       <div className="w-full md:w-[45%] flex flex-col items-center justify-center gap-10">
-        <h1 className=" w-full bg-[#806C63] md:bg-transparent text-center font-garamond italic font-[500] text-[20px] md:text-[40px] text-white md:text-[#806C63]">
+        <h1 className=" w-full bg-[#806C63] md:bg-transparent text-center font-garamond italic font-[500] text-[20px] md:text-[32px] [@media(min-width:1900px)]:text-[40px] text-white md:text-[#806C63]">
           What is Bespoke Diamond Jewellery
         </h1>
-        <p className="px-10 md:px-22 font-helvetica font-medium text-[10px] md:text-[20px] text-center text-[#806C63]">
+        <p className="px-10 md:px-22 font-helvetica font-medium text-[10px] md:text-[20px] [@media(min-width:1900px)]:text-[24px] text-center text-[#806C63]">
           The term ‘ bespoke’ refers to jewellery designed and crafted from scratch. From necklaces to
           bracelets, engagement rings to anniversary gifts, milestone birthdays and more, we offer an
           intimate and personalised service, available both virtually or in person. Our team of jewellers
@@ -43,6 +43,7 @@ export default function WhatIs() {
               content={item.content}
               isOpen={openIndex === idx}
               onToggle={() => toggle(idx)}
+              className="font-helvetica md:text-[20px] [@media(min-width:1900px)]:text-[24px]"
             />
           ))}
         </div>

@@ -14,25 +14,25 @@ const WhatsNew = () => {
   return (
     <>
       {/* Section: md = horizontal, mobile = stacked */}
-      <div className="w-full md:h-auto py-20 h-[600px] flex flex-col md:flex-row gap-5 md:gap-0 items-center justify-center mt-[70px] md:mt-[172px] gap-6 bg-[#EDE7E5]">
+      <div className="w-full md:h-auto py-20 h-[700px] md:h-[600px] flex flex-col md:flex-row gap-5 md:gap-0 items-center justify-center mt-[20px] md:mt-[172px] gap-6 bg-[#EDE7E5]">
         {/* changed items-stretch -> items-center */}
 
         {/* Text Column */}
         <div className="order-1 md:order-1 w-full md:w-[27%] flex flex-col items-center md:items-start justify-center h-full pl-6 md:pl-[64px]">
-          <p className="w-[80%] md:w-full md:text-[18px] text-[14px] text-black font-[600] text-center md:text-left">
+          <p className="font-hiragino w-[80%] md:w-full md:text-[14px] [@media(min-width:1900px)]:text-[18px] text-[14px] text-black font-[600] text-center md:text-left">
             SHOP
           </p>
 
-          <p className="w-[80%] mt-[10px] md:w-full text-[24px] md:text-[32px] text-black font-garamond font-[400] text-center md:text-left italic">
+          <p className="w-[80%] md:mt-[10px] md:w-full text-[24px] md:text-[24px] [@media(min-width:1900px)]:text-[38px] text-black font-garamond font-[400] text-center md:text-left italic">
             What’s New & Trending?
           </p>
 
-          <p className="mt-[39px] w-[80%] md:w-full font-helvetica font-[500] text-[14px] md:text-[15px] text-black text-center md:text-left">
+          <p className="mt-[39px] w-[80%] md:w-full font-helvetica font-[500] text-[12px] md:text-[16px] [@media(min-width:1900px)]:text-[18px] text-black text-center md:text-left">
             A space to find the latest designs, encounter the most loved diamond rings and browse enchanting coloured gemstone collections.
           </p>
 
           {/* Desktop CTA (hidden on small screens) */}
-          <button className="hidden md:flex w-full md:w-[90%] bg-[#998176] md:mt-[70px] h-[57px] border items-center justify-center md:text-[13px] text-[11px] rounded-[6px] text-white">
+          <button className="font-hiragino hidden md:flex w-full md:w-[90%] bg-[#998176] md:mt-[70px] h-[57px] border items-center justify-center md:text-[13px] text-[11px] rounded-[6px] text-white">
             BOOK A CONSULTATION
           </button>
         </div>
@@ -61,14 +61,14 @@ const WhatsNew = () => {
               width={31}
               height={17}
               alt="Previous"
-              className="absolute z-10 left-4 top-1/2 -translate-y-1/2 pointer-events-none w-[17px] h-[9px] md:w-[48px] md:h-[21px]"
+              className="absolute z-10 left-0 md:left-4 top-1/2 translate-y-[-35px] md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[48px] md:h-[21px]"
             />
             <Image
               src="/images/cr-right.svg"
               width={48}
               height={21}
               alt="Next"
-              className="absolute z-10 right-4 top-1/2 -translate-y-1/2 pointer-events-none w-[17px] h-[9px] md:w-[48px] md:h-[21px]"
+              className="absolute z-10 right-0 md:right-4 top-1/2 translate-y-[-35px]  md:-translate-y-1/2 pointer-events-none w-[17px] h-[20px] md:w-[48px] md:h-[21px]"
             />
           </Carousel>
         </div>
@@ -76,7 +76,7 @@ const WhatsNew = () => {
 
       {/* Mobile Button — centered and stable below the section */}
       <div className="flex justify-center mt-4 md:hidden bg-[#EDE7E5] mt-[-20px] ">
-        <button className="w-[60%] h-[50px] bg-[#998176] rounded-[6px] border flex items-center justify-center text-[11px] text-white">
+        <button className="font-hiragino w-[60%] h-[35px] translate-y-[-43px] bg-[#998176] rounded-[6px] border flex items-center justify-center text-[11px] text-white">
           BOOK A CONSULTATION
         </button>
       </div>

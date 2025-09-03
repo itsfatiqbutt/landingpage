@@ -15,12 +15,12 @@ const Browse_C = ({  img, heading, para,noWidth = false }) => {
       </div>
 
       <div className="flex items-center gap-2">
-        <h2 className="font-hiragino text-[12px] md:text-[18px] text-[#403526] font-semibold">{heading}</h2>
+        <h2 className="font-hiragino text-[12px] md:text-[18px] text-[#403526]  font-semibold">{heading}</h2>
         <div className="w-[6px] h-[4px] md:w-[11px] md:h-[7px] relative">
         </div>
       </div>
 
-      <p className="font-helvetica font-medium text-[12px] md:text-[18px] text-black">
+      <p className="font-helvetica font-medium text-[12px] md:text-[16px] [@media(min-width:1900px)]:text-[20px] text-black">
         {para}
       </p>
     </div>

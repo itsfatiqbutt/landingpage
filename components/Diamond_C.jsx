@@ -20,7 +20,7 @@ const Diamond_C = ({ img, link }) => {
       {/* Heading */}
       <Link
         href="#"
-        className="font-hiragino font-[600] text-[10px] md:text-[18px] text-black text-center"
+        className="font-helvetica font-[600] text-[10px] md:text-[16px] [@media(min-width:1900px)]:text-[18px] text-black text-center"
       >
         {link}
       </Link>

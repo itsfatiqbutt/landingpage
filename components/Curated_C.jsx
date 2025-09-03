@@ -18,12 +18,12 @@ const Curated_C = ({ img, name, price }) => {
       </div>
 
       {/* constrained name so it never grows the card height */}
-      <p className="mt-3 font-garamond text-[12px] md:text-[16px] font-[400] text-left w-full h-[44px] md:h-[48px] overflow-hidden">
+      <p className="mt-3 font-garamond text-[12px] md:text-[20px] font-[400] text-left w-full h-[44px] md:h-[48px] overflow-hidden">
         {name}
       </p>
 
       {/* small fixed price area */}
-      <p className="font-garamond text-[10px] md:text-[14px] font-[600] mt-1 text-left w-full h-[20px] md:h-[22px] overflow-hidden">
+      <p className="font-helvetica text-[10px] md:text-[16px] font-[600] mt-[-22px] md:mt-1 text-left w-full h-[20px] md:h-[22px] overflow-hidden">
         {price}
       </p>
     </div>

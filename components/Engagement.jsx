@@ -106,17 +106,17 @@ const Engagement = () => {
   const scrollPrev = () => scrollByIndex("prev");
 
   return (
-    <div className="w-[90%] md:w-[94%] mx-auto mt-[80px] ">
-      <h1 className="font-garamond italic text-[20px] md:text-[40px] text-center font-[500]">
+    <div className="w-[90%] md:w-[94%] mx-auto mt-[30px] md:mt-[80px] ">
+      <h1 className="font-garamond italic text-[20px] md:text-[32px] [@media(min-width:1900px)]:text-[40px] text-center font-[500]">
         Shop by Engagement Ring Style
       </h1>
 
-      <p className="mt-[30px] font-helvetica mx-auto font-medium text-[10px] text-black md:text-[16px] text-center w-[80%] md:w-[67%]">
+      <p className="mt-[30px] px-[20px] md:px-0 font-helvetica mx-auto font-medium text-[10px] text-black md:text-[16px] text-center w-[90%] md:w-[67%]">
         Browse our exclusive engagement ring designs by categories and explore a
         range of timeless or modern styles to pair with your selected lab-grown
-        or earth-mined diamond. Our engagement rings embody over a decade of
+        or earth-mined diamond.<span className="hidden md:visible">Our engagement rings embody over a decade of
         expertise and uncompromising quality, specific only to Hatton Garden
-        Jewellers & Craftsmen.
+        Jewellers & Craftsmen.</span>
       </p>
 
       <div className="relative mt-[30px]">
@@ -150,7 +150,7 @@ const Engagement = () => {
             alt="Previous"
             width={37}
             height={22}
-            className="w-[18px] h-[10px] md:w-[42px] md:h-[21px]"
+            className="w-[18px] h-[20px] md:w-[42px] md:h-[21px]"
           />
         </button>
 
@@ -167,10 +167,15 @@ const Engagement = () => {
             alt="Next"
             width={37}
             height={22}
-            className="w-[18px] h-[10px] md:w-[42px] md:h-[21px]"
+            className="w-[18px] h-[20px] md:w-[42px] md:h-[21px]"
           />
         </button>
       </div>
+      <p className=" md:hidden mt-[50px] font-helvetica mx-auto font-medium text-[10px] text-black md:text-[16px] text-center w-[90%] md:w-[67%]">
+      Our engagement rings embody over a decade of
+        expertise and uncompromising quality, specific only to Hatton Garden
+        Jewellers & Craftsmen.
+      </p>
     </div>
   );
 };

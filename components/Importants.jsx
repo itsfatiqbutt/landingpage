@@ -47,12 +47,12 @@ const Importants = () => {
   }
 
   return (
-    <div className="w-[95%] mx-auto mt-[67px]">
-      <h1 className="w-auto text-center mx-auto font-garamond font-[400] text-[#403526] md:text-[32px] text-[18px]">
+    <div className="w-[95%] mx-auto mt-[20px] md:mt-[67px]">
+      <h1 className="w-auto text-center mx-auto font-garamond font-[400] text-[#403526] md:text-[32px] [@media(min-width:1900px)]:text-[40px] text-[18px]">
         What’s more important to you?...
       </h1>
 
-      <div className="flex flex-col md:flex-row items-start md:items-stretch justify-between mt-[67px] md:mt-27 gap-8">
+      <div className="flex flex-col md:flex-row items-start md:items-stretch justify-between mt-[20px] md:mt-[67px]  gap-8">
         <div className="relative w-full" ref={carouselRef}>
           <Carousel className="w-full px-3">
             <CarouselContent>
@@ -80,7 +80,7 @@ const Importants = () => {
             className="xl:hidden absolute left-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={leftIconSrc} alt="Previous" width={31} height={17} />
+            <img src={leftIconSrc} alt="Previous" width={15} height={9} />
           </button>
 
           {/* Custom Next Button (no bg, no hover, just pointer) */}
@@ -90,7 +90,7 @@ const Importants = () => {
             className="xl:hidden absolute right-[-10px] top-1/2 -translate-y-1/2 z-50 p-0 m-0 cursor-pointer border-0 bg-transparent"
             style={{ WebkitTapHighlightColor: "transparent" }}
           >
-            <img src={rightIconSrc} alt="Next" width={31} height={17} />
+            <img src={rightIconSrc} alt="Next" width={15} height={9} />
           </button>
         </div>
       </div>

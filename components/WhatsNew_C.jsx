@@ -18,7 +18,7 @@ const WhatsNew_C = ({ img, name }) => {
       </div>
 
       {/* Text area with a fixed-ish height so long names don't change card height */}
-      <p className="mt-4 font-garamond text-[12px] md:text-[20px] font-[400] text-left w-full h-[48px] md:h-[64px] overflow-hidden">
+      <p className="mt-4 font-garamond text-[14px] md:text-[20px] font-[400] text-left w-full h-[48px] md:h-[64px] overflow-hidden">
         {name}
       </p>
     </div>
