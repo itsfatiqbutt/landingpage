@@ -71,8 +71,8 @@ const Header = () => {
   return (
     <>
       <div
-        className="w-full h-[16px] md:h-[33px] 2xl:h-[46px]
-                  bg-[#806C63] flex items-center justify-center text-[11px] md:text-[20px] 2xl:text-[22px] text-white  "
+        className="w-full h-[16px] md:h-[33px] 2xl:h-[46px] 
+                  bg-[#806C63] flex items-center justify-center text-[12px] md:text-[16px] text-white  "
       >
         Hatton Garden Jewellers
       </div>
