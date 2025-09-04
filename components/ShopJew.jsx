@@ -26,31 +26,31 @@ with the finest diamonds and heritage techniques.
       </p>
 
     <div className='w-full mx-auto mt-[45px] md:mt-[40px]'>
-    <Carousel className="w-full px-8 md:px-0  ">
-          <CarouselContent>
+      <Carousel className="w-full px-8 md:px-0" opts={{ align: "start", slidesToScroll: 1 }}>
+        <CarouselContent>
+          {
+            shopJew.map((item,idx) =>
             {
-              shopJew.map((item,idx) =>
-              {
-                return (
-                  <CarouselItem key={idx} className="basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                    <ShopJewC key={`1${idx}`} img={item.img} link={item.link}></ShopJewC>
-                  </CarouselItem>
-                )
-              })
-            }
+              return (
+                <CarouselItem key={idx} className="basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                  <ShopJewC key={`1${idx}`} img={item.img} link={item.link}></ShopJewC>
+                </CarouselItem>
+              )
+            })
+          }
 
 
-          </CarouselContent>
-          <CarouselPrevious className="absolute !z-20 left-0   md:left-[-50px] !opacity-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
-          </CarouselPrevious>
+        </CarouselContent>
+        <CarouselPrevious className="absolute !z-20 left-0   md:left-[-50px] !opacity-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+        </CarouselPrevious>
 
-          {/* Custom Next Arrow */}
-          <CarouselNext className="absolute !z-20  right-0 !opacity-0  md:right-[-50px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
-          </CarouselNext>
-          <Image src="/images/cr-left.svg" width={30} height={17} alt="img" className="w-[17px] h-[20px] md:w-[47px] md:h-[35px] absolute z-10 left-0 md:left-[-50px]
+        {/* Custom Next Arrow */}
+        <CarouselNext className="absolute !z-20  right-0 !opacity-0  md:right-[-50px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+        </CarouselNext>
+        <Image src="/images/cr-left.svg" width={30} height={17} alt="img" className="w-[17px] h-[20px] md:w-[47px] md:h-[35px] absolute z-10 left-0 md:left-[-50px]
            top-1/2 -translate-y-1/2"></Image>
-          <Image src="/images/cr-right.svg" width={30} height={17} alt="img" className="w-[17px] h-[20px] md:w-[47px] md:h-[35px] absolute z-10 right-0 md:right-[-50px] top-1/2 -translate-y-1/2"></Image>
-        </Carousel>
+        <Image src="/images/cr-right.svg" width={30} height={17} alt="img" className="w-[17px] h-[20px] md:w-[47px] md:h-[35px] absolute z-10 right-0 md:right-[-50px] top-1/2 -translate-y-1/2"></Image>
+      </Carousel>
     </div>
   </div>
   );

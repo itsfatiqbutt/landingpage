@@ -19,7 +19,7 @@ const Curated = () => {
 
         {/* Carousel Column */}
         <div className="order-2 md:order-1 w-full md:w-[80%]">
-          <Carousel className="w-full px-6 md:px-20">
+          <Carousel className="w-full px-6 md:px-20" opts={{ align: "start", slidesToScroll: 1 }}>
             <CarouselContent className="gap-4">
               {curatedData.map((item, idx) => (
                 // allow item height to be determined by card

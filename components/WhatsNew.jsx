@@ -39,7 +39,7 @@ const WhatsNew = () => {
 
         {/* Carousel Column */}
         <div className="order-2 md:order-2 w-full md:w-[90%] flex-1 h-full relative flex items-center justify-center">
-          <Carousel className="w-full h-full px-4 md:px-12 overflow-hidden">
+          <Carousel className="w-full h-full px-4 md:px-12 overflow-hidden" opts={{ align: "start", slidesToScroll: 1 }}>
             <CarouselContent>
               {whatsnew.map((item, idx) => (
                 <CarouselItem

@@ -18,16 +18,16 @@ const Diamond = () => {
       </h1>
 
       <div className='w-full  mx-auto flex items-center justify-center mt-[10px] md:mt-[63px]'>
-        <Carousel className="w-full px-12 ">
+        <Carousel className="w-full px-12" opts={{ align: "start", slidesToScroll: 1 }}>
           <CarouselContent>
-          {diamondsData.map((item, index) => (
-  <CarouselItem
-    key={item.id || index} // best to use a unique id if available
-    className="basis-1/5 md:basis-1/8 lg:basis-1/10"
-  >
-    <Diamond_C img={item.img} link={item.link} />
-  </CarouselItem>
-))}
+            {diamondsData.map((item, index) => (
+              <CarouselItem
+                key={item.id || index} // best to use a unique id if available
+                className="basis-1/5 md:basis-1/8 lg:basis-1/10"
+              >
+                <Diamond_C img={item.img} link={item.link} />
+              </CarouselItem>
+            ))}
           </CarouselContent>
 
           <CarouselPrevious className="absolute !z-20 !opacity-0 left-[6px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
